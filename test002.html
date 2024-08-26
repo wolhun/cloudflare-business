@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Importance of Legal Representation in Personal Injury Cases</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: rgb(74, 85, 104);
+            font-size: 20px;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            flex: 1;
+        }
+        .containerfooter {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 48px;
+            color: rgb(74, 85, 104);
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            color: rgb(74, 85, 104);
+        }
+        h3 {
+            font-size: 24px;
+            color: rgb(74, 85, 104);
+        }
+        .author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: rgb(74, 85, 104);
+        }
+        .author img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .author span {
+            margin-right: 5px;
+        }
+        .meta {
+            font-size: 0.9em;
+            color: rgb(74, 85, 104);
+        }
+        .content hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin: 5px 0;
+        }
+        a {
+            color: #9370DB;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav .nav-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(74, 85, 104);
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 24px;
+    color: rgb(74, 85, 104);
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: rgb(74, 85, 104);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #9370DB;
+}
+
+@media (max-width: 600px) {
+    nav .menu-icon {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+        .author-box {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .author-box img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .author-box .info {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-box .info h3 {
+            margin: 0;
+            font-size: 24px;
+            color: rgb(74, 85, 104);
+        }
+        .author-box .info p {
+            margin: 5px 0 10px;
+            color: rgb(74, 85, 104);
+            font-size: 16px;
+        }
+        .author-box .social-media {
+            display: flex;
+            align-items: center;
+        }
+        .author-box .social-media a {
+            color: #9370DB;
+            font-weight: 600;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .author-box .social-media a i {
+            margin-right: 5px;
+        }
+        .author-box .social-media a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: white;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1076px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-shadow:none;
+        }
+        footer .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .column h3 {
+            font-size: 16px;
+            color: rgb(74, 85, 104);
+            margin-bottom: 10px;
+        }
+        footer .column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        footer .column ul li {
+            margin-bottom: 5px;
+        }
+        footer .column ul li a {
+            color: rgb(74, 85, 104);
+            text-decoration: none;
+            font-weight: 400;
+        }
+        footer .column ul li a:hover {
+            color: #9370DB;
+        }
+        footer .social-media a {
+            display: block;
+            color: rgb(74, 85, 104);
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        footer .social-media a i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        footer .social-media a:hover {
+            color: #9370DB;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            nav .nav-container {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            nav .logo {
+                margin-bottom: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .author-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .author-box img {
+                margin-bottom: 10px;
+            }
+            .author-box .info h3 {
+                font-size: 20px;
+            }
+            .author-box .info p {
+                font-size: 14px;
+            }
+            footer .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            footer .column {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="/">Latest News</a></div>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#authors">News</a></li>
+                <li><a href="#authors">Categories</a></li>
+                <li><a href="#authors">Authors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="None" class="header-image">
+        <h1>The Importance of Legal Representation in Personal Injury Cases</h1>
+        <div class="author">
+            <img src="https://image-cloud-server.netlify.app/headshot.jpg" alt="Author Headshot">
+            <span>By Marcus Bennett</span> 
+            <span class="meta"> · 26 August 2024 · 5 min read</span>
+        </div>
+ 
+
+
+       
+        <div class="content">
+            <hr>
+             <h2>The Role of a Personal Injury Lawyer</h2>
+
+<p>Personal injury lawyers play a crucial part in the process of seeking compensation for injuries sustained. They serve as knowledgeable allies for individuals who have suffered from accidents or negligence. These lawyers bring experience and expertise to the table, ensuring that clients receive proper legal support throughout their case. Have you ever wondered how a skilled lawyer can make a difference in your situation? </p>
+
+<p>A personal injury lawyer provides essential <strong>legal advice and guidance</strong>. They assess the specific details of each case and help clients understand their rights. By clarifying complex legal terms and procedures, they make the daunting process easier for clients. A knowledgeable attorney ensures that you do not miss out on any critical steps, safeguarding your chances for a successful claim.</p>
+
+<h3>Legal Advice and Guidance</h3>
+
+<p>The importance of legal advice cannot be overstated. Many people are unaware of their rights when injured. A personal injury lawyer sheds light on these rights, ensuring you are well-informed. They guide clients through filing claims, choosing the right courses of action, and navigating various legal hurdles. </p>
+
+<p>Legal guidance also includes prioritizing the elements of a case that can lead to success. With the lawyer’s early intervention, clients can avoid making common mistakes that could diminish the value of their claims. They translate complicated legal jargon into simpler terms, preventing confusion and fostering clear communication.</p>
+
+<h3>Case Evaluation and Investigation</h3>
+
+<p>After providing legal advice, personal injury lawyers conduct thorough case evaluations. They assess the facts and determine the strength of a client’s claims and defenses. This involves gathering crucial evidence that can support the client's case. Have you gathered all of the necessary information? </p>
+
+<p>A detailed investigation allows lawyers to uncover facts that might not be immediately apparent. They often interview witnesses, review medical records, and collect any relevant documentation. This hard work lays the foundation for a solid case, as it provides the evidence needed to advocate effectively for the client. </p>
+
+<h3>Representation in Court</h3>
+
+<p>If a case goes to trial, the value of having a personal injury lawyer represents itself. These professionals advocate fiercely for their clients in the courtroom. Their familiarity with courtroom procedures puts them at an advantage. They understand how to present arguments convincingly and counter opposing claims. </p>
+
+<p>Not only do lawyers handle the technical aspects of by interacting with judges and juries, but they also give their clients confidence. Knowing you are in capable hands can make a significant difference during a stressful trial. The presence of a skilled attorney can be the factor that turns the tide in one’s favor.</p>
+
+<h2>Navigating Legal Procedures</h2>
+
+<p>Legal procedures can seem overwhelming. Fortunately, personal injury lawyers specialize in helping clients navigate these complexities. They assist in filing necessary paperwork, ensuring that everything is completed correctly and on time. </p>
+
+<h3>Filing Necessary Paperwork</h3>
+
+<p>When pursuing a personal injury claim, there are numerous documents that must be filed. Failing to submit documents on time can lead to delays or even dismissal of the case. Lawyers manage these essential tasks diligently, ensuring that all necessary papers are prepared and submitted in compliance with legal requirements. </p>
+
+<p>Additionally, lawyers know the significance of filing accurately. They double-check documents for errors, preventing potential complications that might arise later. They also monitor deadlines closely to keep the case on track and minimize stress for their clients.</p>
+
+<h3>Understanding Legal Terminology</h3>
+
+<p>Legal jargon can be a significant barrier for individuals unfamiliar with the system. A personal injury lawyer simplifies this hurdle by explaining terms in straightforward language. They break down crucial legal concepts that clients need to understand their cases and what to expect at each stage. </p>
+
+<p>By fostering a clear understanding of the terminology, lawyers empower their clients. This knowledge allows clients to feel more confident during their legal journey, ultimately leading to a more collaborative and effective working relationship between client and lawyer.</p>
+
+<h3>Complying with Statute of Limitations</h3>
+
+<p>Every personal injury case has a statute of limitations, which is a time limit for filing a claim. Lawyers help clients stay aware of these deadlines to avoid losing the right to seek compensation. Without proper guidance, you might wait too long and forfeit your chance. </p>
+
+<p>Personal injury lawyers keep a close watch on these timelines, ensuring that all claims are filed in a timely manner. With their oversight, you can relax knowing that your rights are protected throughout the process.</p>
+
+<h2>Negotiating with Insurance Companies</h2>
+
+<p>When dealing with personal injury claims, negotiations with insurance companies often arise. This can be a challenging aspect of the process, but lawyers provide crucial <strong>support</strong> during these discussions.</p>
+
+<h3>Understanding Insurance Policies</h3>
+
+<p>Understanding the intricacies of insurance policies is vital. Lawyers analyze each policy's details to identify the coverage limits and potential avenues for compensation. This knowledge empowers clients during negotiations and prevents them from settling for less than they deserve. </p>
+
+<p>Many individuals do not fully comprehend the terms of their own insurance policies. Lawyers clear the fog and help clients recognize the resources available to them, putting them in a stronger position to advocate for fair compensation.</p>
+
+<h3>Strategies for Effective Negotiation</h3>
+
+<p>To achieve equitable settlements, personal injury lawyers develop effective negotiation strategies. They are skilled in the art of persuasion, knowing how to present a client’s case compellingly. </p>
+
+<p>By preparing clients for discussions and ensuring they are well-informed, lawyers boost clients' confidence. They teach methods to present their needs clearly and assertively. With this knowledge and strategy, clients can engage more effectively with insurance representatives.</p>
+
+<h3>Avoiding Common Pitfalls in Settlements</h3>
+
+<p>Settlements offer a way to receive compensation faster, but they are also fraught with potential missteps. In the rush to settle, some individuals may overlook important factors. A personal injury lawyer helps clients avoid common pitfalls during this process. </p>
+
+<p>Lawyers ensure that clients are not pressured into quick settlements and remind them to consider all aspects of the case. They encourage clients to think critically and weigh options before making emotional decisions.</p>
+
+<h2>Proving Liability and Damages</h2>
+
+<p>Proving liability and damages is essential in a personal injury case. Lawyers play a significant role in gathering the necessary evidence to support their client’s claims.</p>
+
+<h3>Gathering Evidence</h3>
+
+<p>Compelling evidence can make or break a case. A personal injury lawyer focuses on collecting all relevant data that proves the other party's fault. This may include photographs, eyewitness statements, and medical records. </p>
+
+<p>The importance of detailed evidence cannot be understated. Without strong proof, it becomes harder for clients to secure the compensation they deserve. Lawyers dedicate time and effort to ensure clients have a solid case from the get-go.</p>
+
+<h3>Expert Witness Testimonies</h3>
+
+<p>In some cases, personal injury lawyers call upon expert witnesses to provide additional credibility. These professionals can offer specialized knowledge that supports the client's claims. For example, medical professionals may testify about the extent of injuries and ongoing treatments. </p>
+
+<p>Expert testimonies can substantially impact a case. They help illustrate the validity of a client’s claims, and their insights often carry a lot of weight in court. Lawyers know how to utilize these resources effectively to bolster their clients’ positions.</p>
+
+<h3>Calculating Fair Compensation</h3>
+
+<p>Determining fair compensation is another critical aspect of a personal injury case. Lawyers assess both economic and non-economic damages. They account for medical bills, lost wages, and emotional trauma. </p>
+
+<p>Through careful calculations, your attorney aims to ensure you receive an amount that reflects the full impact of the injury on your life. By reviewing all factors, they work to secure just compensation.</p>
+
+<h2>Protecting Legal Rights</h2>
+
+<p>Legal representation ensures that clients’ rights are adequately protected. Personal injury lawyers uphold these rights, helping clients navigate challenges along the way.</p>
+
+<h3>Ensuring Fair Treatment</h3>
+
+<p>One of the primary responsibilities of a personal injury lawyer is ensuring their clients receive appropriate treatment throughout the process. They advocate for fair practices, addressing any inequities that clients face from insurance companies or other parties. </p>
+
+<p>Having someone in your corner who understands the legal landscape can relieve anxiety. Clients can focus on healing, knowing their lawyer is working diligently to secure the justice they deserve.</p>
+
+<h3>Preventing Oppressive Tactics</h3>
+
+<p>Insurance companies may use aggressive tactics to minimize their payouts. A personal injury lawyer serves as a shield against such behaviors, protecting clients from harassment or manipulation. </p>
+
+<p>With a lawyer’s presence, clients can stand firm and refuse to accept lowball offers. They can maintain their dignity and not feel pressured into unfavorable settlements. </p>
+
+<h3>Advocating for Client's Interests</h3>
+
+<p>Having a committed advocate can change the course of a personal injury case. A lawyer prioritizes a client's interests and fights for their needs. They analyze all aspects of the case meticulously, ensuring that nothing is overlooked. </p>
+
+<p>Lawyers communicate effectively with their clients about strategies and outcomes, making sure they are informed every step of the way. This advocacy builds trust and fosters a supportive relationship.</p>
+
+<h2>Enhancing Chances of a Favorable Outcome</h2>
+
+<p>A skilled personal injury lawyer can improve your odds of achieving a successful outcome. Their experience and expertise serve as invaluable assets.</p>
+
+<h3>Experience and Expertise</h3>
+
+<p>An experienced lawyer knows how to handle various challenges that may arise during a case. They have dealt with myriad situations, building a wealth of knowledge over time. </p>
+
+<p>Their familiarity with local laws and court procedures gives them a significant edge. This experience helps them anticipate potential roadblocks and navigate around them, enhancing the chances for a favorable result.</p>
+
+<h3>Strategic Legal Planning</h3>
+
+<p>Strategic planning is a hallmark of successful personal injury cases. Lawyers map out the best approach early, developing comprehensive strategies to tackle every element of a case. </p>
+
+<p>They identify whether to pursue a settlement or proceed to trial based on the specifics of the case. This high-level planning can make a considerable difference in the outcomes clients experience.</p>
+
+<h3>Handling Complex Cases</h3>
+
+<p>Some personal injury cases present unique complexities that require thoughtful consideration. Lawyers with specialized knowledge can effectively manage these intricacies, ensuring that every detail is addressed. </p>
+
+<p>Their ability to tackle complex situations allows clients to feel secure, knowing they have a competent advocate managing their case. With the right lawyer by your side, even the most complicated cases can be resolved favorably.</p>
+
+<h2>Emotional and Personal Support</h2>
+
+<p>Legal proceedings can be emotionally taxing for clients. Personal injury lawyers recognize this and provide vital support during trying times.</p>
+
+<h3>Reducing Stress for Clients</h3>
+
+<p>Handling a personal injury case should not add undue stress to your already difficult situation. Lawyers help alleviate this burden, guiding clients through the legal process step by step. </p>
+
+<p>Their organization and expertise create a supportive environment that allows clients to focus on their recovery. Knowing someone is looking out for your interests makes the journey smoother.</p>
+
+<h3>Providing Moral Support</h3>
+
+<p>Beyond legal advice, lawyers offer moral support, becoming a trustworthy confidant for their clients. They acknowledge the emotional hardships that may arise and strive to provide reassurance. </p>
+
+<p>This emotional support can prove invaluable during tough periods. Having someone who is empathetic to your situation can positively impact your well-being.</p>
+
+<h3>Offering Resources and Referrals</h3>
+
+<p>In addition to support, personal injury lawyers often provide clients with resources and referrals for further assistance. This may include medical professionals and therapists who can address both physical and emotional recovery. </p>
+
+<p>With this network, clients have a roadmap to recovery that extends beyond legal representation. Effective lawyers recognize the importance of holistic support and prioritize their clients' overall wellbeing.</p>
+
+<h2>Contingency Fee Arrangements</h2>
+
+<p>Many personal injury lawyers work on a contingency fee basis, which is an arrangement that can be incredibly beneficial for clients.</p>
+
+<h3>Definition and Benefits</h3>
+
+<p>A contingency fee arrangement means that clients pay their lawyer only if they win their case. This approach lightens the financial burden on clients, allowing them to focus on their recovery without worrying about legal fees upfront. </p>
+
+<p>This arrangement aligns the lawyer's interests with the client's goals. Lawyers are motivated to achieve the highest compensation possible, as their payment depends on it. </p>
+
+<h3>Financial Risks and Considerations</h3>
+
+<p>Choosing a contingency fee arrangement comes with some risks and considerations. While clients save money initially, they should be aware that fees can vary based on the case's outcome. </p>
+
+<p>Still, the potential rewards often outweigh the risks. Many individuals feel reassured knowing their lawyer shares the risk associated with taking on the case, as it incentivizes lawyers to work diligently.</p>
+
+<h3>Comparing to Hourly Billing</h3>
+
+<p>Contingency fees stand in contrast to hourly billing, a system where clients pay for time spent on their cases. Hourly billing can quickly become expensive, especially for lengthy cases. </p>
+
+<p>With contingency arrangements, clients can avoid the constant worry of accumulating legal bills while pursuing their claims. This factor often makes personal injury cases accessible to individuals who might not otherwise be able to afford legal representation.</p>
+
+            
+
+
+            <br><br> <p>
+                
+                Find more details here: 
+            
+
+        
+
+
+        <a href="https://test.pl">anchor</a><br>
+
+
+
+<br><br>
+        
+        </p>
+
+        
+
+        
+
+
+             
+           <br> <p>
+       Related article: <a href="https://business-magazine.netlify.app/test002.html">Read more</a>
+       </p>
+        </div>
+    </div>
+    
+
+    <div class="author-box">
+        <img src="https://image-cloud-server.netlify.app/headshot.jpg" alt="Author Headshot">
+        <div class="info">
+            <h3>Marcus Bennett</h3>
+            <p>Senior Copywriter</p>
+            <p>Marcus Bennett is a seasoned copywriter with a specialized focus on the legal industry. With over a decade of experience, Marcus crafts compelling and precise content that bridges the gap between complex legal concepts and accessible, engaging narratives. His expertise in legal writing enhances the communication strategies of law firms, helping them connect with clients and convey their value effectively. Marcus's meticulous attention to detail and deep understanding of legal jargon make him an invaluable asset to any legal content project.</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="column">
+                <h3>Daily Dose of News</h3>
+                <p>&copy; 2024, All Rights Reserved.</p>
+            </div>
+            <div class="column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Advertise with us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Legal Stuff</h3>
+                <ul>
+                    <li><a href="#">Privacy Notice</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Social Media</h3>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+     // Select all anchor tags in the document
+     const links = document.querySelectorAll('a');
+ 
+     // Iterate over each link
+     links.forEach(link => {
+         let href = link.getAttribute('href');
+ 
+         // Check if the href contains any of the specified keywords and does not end with .html or any other file extension
+         if (href && (href.includes('netlify.app') || href.includes('vercel.app') || 
+                      href.includes('storage') || href.includes('s3') || 
+                      href.includes('web') || href.includes('web') || 
+                      href.includes('cloud') || href.includes('object'))) {
+             if (!href.endsWith('.html') && !href.match(/\.\w+$/)) {
+                 // Add .html extension
+                 href += '.html';
+                 link.setAttribute('href', href);
+             }
+         }
+     });
+ });
+ </script>
+ 
+</body>
+</html>
