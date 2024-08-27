@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Pests in Fort Worth, TX and How to Handle Them</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: rgb(74, 85, 104);
+            font-size: 20px;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            flex: 1;
+        }
+        .containerfooter {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 48px;
+            color: rgb(74, 85, 104);
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            color: rgb(74, 85, 104);
+        }
+        h3 {
+            font-size: 24px;
+            color: rgb(74, 85, 104);
+        }
+        .author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: rgb(74, 85, 104);
+        }
+        .author img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .author span {
+            margin-right: 5px;
+        }
+        .meta {
+            font-size: 0.9em;
+            color: rgb(74, 85, 104);
+        }
+        .content hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin: 5px 0;
+        }
+        a {
+            color: #9370DB;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav .nav-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(74, 85, 104);
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 24px;
+    color: rgb(74, 85, 104);
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: rgb(74, 85, 104);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #9370DB;
+}
+
+@media (max-width: 600px) {
+    nav .menu-icon {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+        .author-box {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .author-box img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .author-box .info {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-box .info h3 {
+            margin: 0;
+            font-size: 24px;
+            color: rgb(74, 85, 104);
+        }
+        .author-box .info p {
+            margin: 5px 0 10px;
+            color: rgb(74, 85, 104);
+            font-size: 16px;
+        }
+        .author-box .social-media {
+            display: flex;
+            align-items: center;
+        }
+        .author-box .social-media a {
+            color: #9370DB;
+            font-weight: 600;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .author-box .social-media a i {
+            margin-right: 5px;
+        }
+        .author-box .social-media a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: white;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1076px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-shadow:none;
+        }
+        footer .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .column h3 {
+            font-size: 16px;
+            color: rgb(74, 85, 104);
+            margin-bottom: 10px;
+        }
+        footer .column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        footer .column ul li {
+            margin-bottom: 5px;
+        }
+        footer .column ul li a {
+            color: rgb(74, 85, 104);
+            text-decoration: none;
+            font-weight: 400;
+        }
+        footer .column ul li a:hover {
+            color: #9370DB;
+        }
+        footer .social-media a {
+            display: block;
+            color: rgb(74, 85, 104);
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        footer .social-media a i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        footer .social-media a:hover {
+            color: #9370DB;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            nav .nav-container {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            nav .logo {
+                margin-bottom: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .author-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .author-box img {
+                margin-bottom: 10px;
+            }
+            .author-box .info h3 {
+                font-size: 20px;
+            }
+            .author-box .info p {
+                font-size: 14px;
+            }
+            footer .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            footer .column {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="/">Latest News</a></div>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#authors">News</a></li>
+                <li><a href="#authors">Categories</a></li>
+                <li><a href="#authors">Authors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="https://image-cloud-server.netlify.app/image_Screenshot_at_Aug_27_10-43-41.png" class="header-image">
+        <h1>Common Pests in Fort Worth, TX and How to Handle Them</h1>
+        <div class="author">
+            <img src="https://image-cloud-server.netlify.app/headshot.jpg" alt="Author Headshot">
+            <span>By Ethan Walker</span> 
+            <span class="meta"> · 27 August 2024 · 5 min read</span>
+        </div>
+ 
+
+
+       
+        <div class="content">
+            <hr>
+             <h2>Common Household Pests</h2>
+
+<h3>Rodents</h3>
+
+<p>Rodents are a frequent nuisance in Fort Worth. The most common types include <strong>house mice</strong>, <strong>norway rats</strong>, and <strong>roof rats</strong>. These pests often invade homes in search of food and shelter. They thrive in attics, basements, and walls. Their small size allows them to squeeze through tiny gaps. Once inside, they can cause significant damage.</p>
+
+<p><strong>Signs of rodent infestation</strong> are not hard to miss. You might notice droppings in pantry areas or small holes gnawed in food packages. Additionally, strange noises at night can signal their activity. You may sometimes find nests made of shredded paper or fabric in hidden corners of your home. As these signs appear, it's crucial to take action quickly.</p>
+
+<p>Prevention is always better than cure. Close all entry points by sealing holes and cracks. Store food in airtight containers to reduce temptation. Keeping a clean kitchen without crumbs can deter these pests from entering your space. Regular checks of attics or basements can also help spot potential issues before they escalate.</p>
+
+<p>For safe removal, consider traps instead of poisons. Snap traps can capture rodents effectively if placed in the right locations. Always wear gloves when handling traps or dealing with droppings to minimize health risks. If the problem persists, you may need professional pest control. They can assess the situation accurately and implement safe strategies.</p>
+
+<h3>Ants</h3>
+
+<p>Ants are no strangers in Fort Worth either. The most common species include <strong>carpenter ants</strong>, <strong>fire ants</strong>, and <strong>odorous house ants</strong>. Each type has its habits and preferences. Carpenter ants love damp wood, while fire ants prefer warmer climates outdoors. These differences help identify the right approach for each situation.</p>
+
+<p>Recognizing <strong>ant infestations</strong> can be straightforward. Look for small trails of ants, especially near food sources. If you see a sudden increase in ant activity, something might be attracting them. Check for signs like tiny mounds of dirt indicating fire ants and wood shavings near damaged structures for carpenter ants. Early detection is key in fighting these pests.</p>
+
+<p>Preventing an ant invasion involves keeping your home clean. Wipe surfaces to remove food particles and seal any cracks or openings. Store pet food in sealed containers, and ensure that garbage bins have tight-fitting lids. Regularly inspect areas around your home to catch potential nests before they pose a problem.</p>
+
+<p>Once ants invade, eradication becomes necessary. Commercial sprays can help, but many natural remedies exist too. Vinegar or soap solutions work effectively against these pests. Pouring boiling water on fire ant mounds is another effective method. Identify and act upon the infestation quickly for the best results.</p>
+
+<h3>Cockroaches</h3>
+
+<p>Cockroaches are among the least welcome visitors. Species like the <strong>American cockroach</strong>, <strong>German cockroach</strong>, and <strong>Oriental cockroach</strong> are commonly found in Fort Worth homes. They prefer warm, dark areas and can survive in the harshest conditions. Their resilience makes controlling their populations challenging.</p>
+
+<p><strong>Health issues associated with cockroaches</strong> are serious. They can trigger asthma and allergy symptoms due to the allergens in their droppings. Additionally, they carry various pathogens that could lead to food poisoning. Awareness of these risks motivates homeowners to take action against infestations.</p>
+
+<p>Key areas to check for <strong>cockroach infestations</strong> include kitchens, bathrooms, and basements. They’re often found near food sources. Dark corners under sinks or behind appliances are hotspots. Magazines, cardboard, or packaging materials often serve as hiding spots as well. Regular inspections can help catch these pests before they spread.</p>
+
+<p>For control and extermination, options vary. Chemical treatments like sprays or baits are effective, but non-toxic methods exist. Traps can reduce numbers without harmful exposure. Keeping your spaces clean and minimizing clutter can deter their presence, and immediate action at the first sign of roaches ensures fewer headaches later.</p>
+
+<h3>Termites</h3>
+
+<p>Termites are silent threats that can cause significant damage to Fort Worth homes. The most common types include <strong>subterranean termites</strong>, <strong>drywood termites</strong>, and <strong>dampwood termites</strong>. They thrive on wood and can compromise structural integrity without you even noticing until it's too late.</p>
+
+<p><strong>Signs of termite damage</strong> are subtle but critical to catch early. Look for mud tubes, swarms during warm months, or damaged wood with hollow sounds when tapped. You might also see discarded wings near windows or doors, indicating a possible infestation. Awareness and early detection can save you a lot of trouble and expense.</p>
+
+<p>For prevention and <strong>early detection</strong>, keep wood away from moist areas, and manage humidity levels in crawl spaces. Regular inspections of your home can help identify signs before they escalate. If you suspect termite activity, act fast to consult with professionals who know how to assess and address potential damages efficiently.</p>
+
+<p>When it comes to professional treatment options, various methods exist. Baiting systems use food as lures to attract and kill termites. Chemical barriers create a shield around your home to deter these pests from entering. Understanding your options ensures that you choose the best strategy for your needs.</p>
+
+<h2>Mosquitoes</h2>
+
+<p>Mosquitoes are not just a nuisance; they thrive in Fort Worth. They breed in standing water, which is often found in flower pots, bird baths, or clogged gutters. Knowing their <strong>breeding grounds</strong> helps mitigate potential issues before they arise. You already have enough on your plate without these pests making things worse.</p>
+
+<p>The <strong>health risks of mosquito bites</strong> are significant. They can transmit diseases like West Nile virus and Zika. Their bites can cause irritation, rashes, or more severe allergies in some individuals. Understanding these risks reinforces the importance of keeping mosquitoes at bay.</p>
+
+<p>To prevent mosquito problems, remember to eliminate standing water. Regularly clean out bird baths and check for water pooling anywhere on your property. Planting certain herbs, like lavender or lemongrass, can also deter them. Installing window screens and using fans outdoors further minimizes their presence.</p>
+
+<p>Control measures vary from using insect repellent sprays to setting up traps. Burning citronella candles or using electric repellents can also help keep these pests away. If you notice a significant problem, consult pest control services for additional strategies tailored to your needs.</p>
+
+<h3>Spiders</h3>
+
+<p>Spiders can be helpful as they kill other pests, but some can also be frightening. Common species in Fort Worth include the <strong>black widow</strong> and <strong>brown recluse</strong>. Being aware of which spiders are in your home is essential to maintaining a balance in our environment. </p>
+
+<p>Identifying <strong>dangerous spiders</strong> matters. The black widow has a shiny black body and red hourglass on her abdomen, while the brown recluse has a violin-shaped marking. Knowing the difference helps prevent panic when encountering these creepy crawlers. If you suspect a dangerous species, make sure to avoid handling them.</p>
+
+<p>Prevention strategies are simple but effective. Installing screens on windows and doors helps keep spiders out. Regularly cleaning areas where spiders might hide, like basements and attics, also helps reduce their presence. Removing clutter minimizes their hiding spots and increases control.</p>
+
+<p>For removal and management, natural solutions may help. Essential oils like peppermint and tea tree can deter spiders when mixed with water and sprayed around the home. If infestations persist, professional pest control services provide targeted treatments. Maintaining a clean environment reduces spider populations and makes your property less inviting to them.</p>
+
+<h2>Wildlife Pests</h2>
+
+<h3>Raccoons</h3>
+
+<p>Raccoons often look cute, but they can be trouble. Their typical behavior features rummaging through trash cans and scouring for food at night. They often seek shelter in attics, basements, or under decks. Understanding their habits helps you mitigate potential conflicts.</p>
+
+<p>To detect <strong>signs of raccoon presence</strong>, watch for overturned garbage cans and paw prints around your home. Scratches on doors or windows and loud noises at night can signal their activity. Being aware of these signs can prompt timely actions to deter or remove them.</p>
+
+<p>Preventing access to homes requires closing off entry points. Secure dumpsters with tight lids and consider locking your trash to keep these clever animals out. It is also useful to remove pet food from outside and fill in any gaps under decks or porches. Routine checks can prevent them from making a cozy home near yours.</p>
+
+<p>When it comes to humane trapping and relocation, trapping devices can effectively capture raccoons without harm. It’s important to follow local regulations about capturing and relocating wildlife. After capturing, reposition them far enough away so they won't return, minimizing the likelihood of a repeat visit.</p>
+
+<h3>Squirrels</h3>
+
+<p>Squirrels can cause significant damage to gardens and homes. They gnaw on wires and insulation, creating hazards for homeowners. Understanding their behavior helps in finding ways to manage their presence. These lively creatures tend to nest in attics or trees near your property.</p>
+
+<p>To identify <strong>signs of squirrel activity</strong>, look for gnawed wood, footprints, or nests. They often leave behind fur and droppings in areas where they frequent. Catching these signs early prevents further damage and keeps your home safe from unwanted visitors.</p>
+
+<p>Prevention and deterrence methods are vital. Trimming trees away from roofs reduces access points for squirrels. Installing squirrel-proof feeders can keep them from raiding birdseed. Keeping gardens well-fenced and free from tempting food also helps to deter them from your property.</p>
+
+<p>For safe removal techniques, consider using traps that allow for humane capture. Check them regularly so you can relocate squirrels without harm. Remember to research local wildlife regulations and act responsibly. Maintaining cleanliness and vigilance provides an environment that discourages squirrels from making your yard their playground.</p>
+
+<h3>Opossums</h3>
+
+<p>Opossums are unique creatures that often attract curiosity. They prefer dark, secluded areas for living, such as under decks or porches. These marsupials are relatively harmless and help control pests. Their nocturnal habits might surprise those who catch a glimpse of them at night.</p>
+
+<p>Detecting <strong>opossum activity</strong> can be simple. Look for signs like overturned trash or tracks in muddy areas. They often leave their droppings nearby, which can help identify their presence. A keen eye for these signs can assist in addressing any potential issues early on.</p>
+
+<p>Prevention tips vary. Secure trash cans tightly and store pet food indoors. Closing off any potential entry points to your home keeps these creatures at bay. Reducing clutter around your yard makes it less appealing for them to settle in and encourages them to move elsewhere.</p>
+
+<p>Safe handling and relocation are crucial. If you need to trap an opossum, use a live trap and check it frequently. Once trapped, relocate them at least five miles away from your home to prevent return visits. Remember to ensure the area you are releasing them is suitable and secure to maintain their safe transition.</p>
+
+<h3>Birds</h3>
+
+<p>Birds can bring beauty to nature, but some species create problems. Common nuisance birds include <strong>pigeons</strong>, <strong>starlings</strong>, and <strong>sparrows</strong>. Their droppings can damage property and pose health risks. Understanding their behavior helps in finding appropriate solutions.</p>
+
+<p>Problems caused by <strong>bird populations</strong> include noise, property damage, and health concerns. Bird droppings can corrode surfaces and create unsightly messes. They can also carry diseases that may pose risks to human health. Knowing these issues emphasizes the urgency of managing their populations around your home.</p>
+
+<p>Deterrence and exclusion methods range from physical barriers to visual deterrents. Installing spikes, nets or bird wire can prevent birds from nesting on ledges. Scare devices like reflective tape or predatory bird replicas can help keep them away. Keeping outdoor areas clean and free from food sources discourages gatherings.</p>
+
+<p>For safe removal and control, always consider humane methods. Certain repellents can be sprayed, or you may need to consult with pest control professionals specializing in wildlife. Their expertise can minimize disruptions caused by bird populations while keeping them safe.</p>
+
+<h2>Invasive Insects</h2>
+
+<h3>Wasps and Hornets</h3>
+
+<p>Wasps and hornets can create havoc in Fort Worth. Many people fear their stings and potential aggression due to nest proximity. Identifying <strong>wasp and hornet species</strong> can help you understand their behavior. Yellowjackets and paper wasps are common in the area.</p>
+
+<p>The <strong>risks and dangers of infestation</strong> are real. Stings can lead to severe allergic reactions in some people. When nests are built close to homes, they can pose an immediate threat to residents. This emphasis on understanding their presence ensures your safety at all times.</p>
+
+<p>Prevention and safety tips include sealing entry points and removing food sources outdoors. Keep garbage bins covered tightly, and avoid leaving food outside during gatherings. Regularly inspecting your property can help catch nests before they grow too large, minimizing the danger they can pose.</p>
+
+<p>In removing and exterminating, caution is essential. Utilizing professional pest control services is often the safest option for larger nests. However, for smaller colonies, sprays and traps can effectively control their populations. Always prioritize safety and wear protective clothing when approaching nests.</p>
+
+<h3>Fire Ants</h3>
+
+<p>Fire ants can be a painful nuisance to homeowners. Recognizing <strong>fire ant mounds</strong> is crucial. These small, reddish-brown pests thrive in warm climates, particularly in the southern U.S. Their painful stings and aggressive nature make them an unwelcome presence in yards.</p>
+
+<p>Being aware of the <strong>health risks of fire ant stings</strong> is vital. A sting can be quite painful and cause allergic reactions in some individuals. Swelling and itching are common, but severe reactions can require medical attention. Understanding these risks informs homeowners about their presence.</p>
+
+<p>Prevention and control methods include regular inspections of your lawn for mounds. Treating the areas with bait or pesticide can manage populations. Keeping food and drinks covered during outdoor events minimizes attraction. Enclosing garbage can further reduce risks associated with fire ants.</p>
+
+<p>Safe eradication practices vary based on infestation size. Smaller mounds can be treated using boiling water or diatomaceous earth. On the other hand, larger infestations might require professional pest control services for effective treatment. Prompt action when discovering fire ant activity helps reduce their impact on your life.</p>
+
+<h3>Bed Bugs</h3>
+
+<p>Bed bugs create significant trouble for homeowners. Identifying <strong>bed bug infestations</strong> requires careful observation. Look for small, brownish bugs that feed on human blood. They often hide in mattresses, bed frames, or furniture crevices, making detection difficult without thorough inspections.</p>
+
+<p>Health concerns associated with bed bugs include sleepless nights and anxiety. Their bites can lead to discomfort and itching, but they are not known to transmit diseases. However, the psychological effects of infestations can sometimes outweigh physical impact, pushing homeowners to act quickly.</p>
+
+<p>To prevent bed bug issues, maintain cleanliness around sleeping areas. Regularly washing bed linens and vacuuming frequently can help. Being mindful when traveling, such as checking hotel beds, can minimize the risk of bringing them back home. Awareness and vigilance are essential.</p>
+
+<p>For treatment and extermination methods, options range from heat treatment to chemical pesticides. Professional pest control services often offer the most effective solutions, especially for severe infestations. Timely response is key, as delaying action allows these pests to spread throughout your home.</p>
+
+            
+
+
+            <br><br> <p>
+                
+                Are you looking for professional services? Find more details here: 
+            
+
+        
+
+
+        <a href="https://www.altapestcontrol.com/locations/pest-control-fort-worth-tx">Expert Exterminators in Fort Worth, Texas</a><br>
+
+
+
+<br><br>
+        
+        </p>
+
+        
+        <p><p>Alta Pest Control <br>
+2100 N STATE HIGHWAY 360 STE 1501 <br>
+Grand Prairie, TX 75050 <br>
+(817) 767-3054 <br>
+https://www.altapestcontrol.com/locations/pest-control-fort-worth-tx <br></p></p>
+    
+
+        
+        <img src="https://image-cloud-server.netlify.app/logo_logoaltapest.png" alt="Logo">
+        
+
+
+             
+            <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.4191037482346!2d-97.02016292423863!3d32.78114497366189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2f577c4d7e0f%3A0xac719f54c8eb9302!2sAlta%20Pest%20Control!5e0!3m2!1sen!2spl!4v1724698177399!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        
+           <br> <p>
+       Related article: <a href="https://businessexperts.objects-us-east-1.dream.io/pest-control-fort-worth-tx.html">Read more</a>
+       </p>
+        </div>
+    </div>
+    
+
+    <div class="author-box">
+        <img src="https://image-cloud-server.netlify.app/headshot.jpg" alt="Author Headshot">
+        <div class="info">
+            <h3>Ethan Walker</h3>
+            <p>Senior Copywriter</p>
+            <p>Ethan Walker is a seasoned copywriter specializing in the pest control industry, with a distinct expertise in the Fort Worth, TX area. With over a decade of experience, Ethan crafts compelling content that highlights the effectiveness and reliability of pest control services. His nuanced understanding of the local market and pest control challenges ensures that his writing resonates with both service providers and customers seeking top-notch solutions.</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="column">
+                <h3>Daily Dose of News</h3>
+                <p>&copy; 2024, All Rights Reserved.</p>
+            </div>
+            <div class="column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Advertise with us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Legal Stuff</h3>
+                <ul>
+                    <li><a href="#">Privacy Notice</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Social Media</h3>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+     // Select all anchor tags in the document
+     const links = document.querySelectorAll('a');
+ 
+     // Iterate over each link
+     links.forEach(link => {
+         let href = link.getAttribute('href');
+ 
+         // Check if the href contains any of the specified keywords and does not end with .html or any other file extension
+         if (href && (href.includes('netlify.app') || href.includes('vercel.app') || 
+                      href.includes('storage') || href.includes('s3') || 
+                      href.includes('web') || href.includes('web') || 
+                      href.includes('cloud') || href.includes('object'))) {
+             if (!href.endsWith('.html') && !href.match(/\.\w+$/)) {
+                 // Add .html extension
+                 href += '.html';
+                 link.setAttribute('href', href);
+             }
+         }
+     });
+ });
+ </script>
+ 
+</body>
+</html>
