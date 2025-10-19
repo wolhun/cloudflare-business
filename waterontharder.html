@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technische Specificaties van de SoluCalc CO₂-waterontharder Uitgelegd</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: rgb(74, 85, 104);
+            font-size: 20px;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            flex: 1;
+        }
+        .containerfooter {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 48px;
+            color: rgb(74, 85, 104);
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            color: rgb(74, 85, 104);
+        }
+        h3 {
+            font-size: 24px;
+            color: rgb(74, 85, 104);
+        }
+        .author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: rgb(74, 85, 104);
+        }
+        .author img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .author span {
+            margin-right: 5px;
+        }
+        .meta {
+            font-size: 0.9em;
+            color: rgb(74, 85, 104);
+        }
+        .content hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin: 5px 0;
+        }
+        a {
+            color: #9370DB;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav .nav-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(74, 85, 104);
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 24px;
+    color: rgb(74, 85, 104);
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: rgb(74, 85, 104);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #9370DB;
+}
+
+@media (max-width: 600px) {
+    nav .menu-icon {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+        .author-box {
+            max-width: 1076px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .author-box img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .author-box .info {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-box .info h3 {
+            margin: 0;
+            font-size: 24px;
+            color: rgb(74, 85, 104);
+        }
+        .author-box .info p {
+            margin: 5px 0 10px;
+            color: rgb(74, 85, 104);
+            font-size: 16px;
+        }
+        .author-box .social-media {
+            display: flex;
+            align-items: center;
+        }
+        .author-box .social-media a {
+            color: #9370DB;
+            font-weight: 600;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .author-box .social-media a i {
+            margin-right: 5px;
+        }
+        .author-box .social-media a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: white;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1076px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-shadow:none;
+        }
+        footer .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .column h3 {
+            font-size: 16px;
+            color: rgb(74, 85, 104);
+            margin-bottom: 10px;
+        }
+        footer .column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        footer .column ul li {
+            margin-bottom: 5px;
+        }
+        footer .column ul li a {
+            color: rgb(74, 85, 104);
+            text-decoration: none;
+            font-weight: 400;
+        }
+        footer .column ul li a:hover {
+            color: #9370DB;
+        }
+        footer .social-media a {
+            display: block;
+            color: rgb(74, 85, 104);
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+        footer .social-media a i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        footer .social-media a:hover {
+            color: #9370DB;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            nav .nav-container {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            nav .logo {
+                margin-bottom: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .author-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .author-box img {
+                margin-bottom: 10px;
+            }
+            .author-box .info h3 {
+                font-size: 20px;
+            }
+            .author-box .info p {
+                font-size: 14px;
+            }
+            footer .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            footer .column {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="/">Latest News</a></div>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#authors">News</a></li>
+                <li><a href="#authors">Categories</a></li>
+                <li><a href="#authors">Authors</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="https://image-cloud-server.netlify.app/image_dsc06031.jpg.webp" class="header-image">
+        <h1>Technische Specificaties van de SoluCalc CO₂-waterontharder Uitgelegd</h1>
+        
+        <div class="author">
+         
+            <span>By Wouter Jansen</span> 
+            <span class="meta"> · 19 October 2025 · 5 min read</span>
+        </div>
+ 
+
+
+       
+        <div class="content">
+            <hr>
+             <h2>Functie en Werkingsprincipe van de SoluCalc</h2>
+
+<p>De SoluCalc CO₂-waterontharder functioneert door het gebruik van <strong>kooldioxide (CO₂)</strong> om kalkafzetting in water te verminderen. Wanneer de CO₂ in contact komt met het water, reageert het met het calciumcarbonaat. Dit proces zorgt ervoor dat het kalkprobleem wordt aangepakt zonder de agressieve chemicaliën die vaak in traditionele ontharders worden gebruikt. Maar hoe precies lost CO₂ die hardheid op? Het antwoord ligt in de chemische reacties die plaatsvinden. De CO₂ lost op in het water en vormt zwakke carbonzuur, wat helpt bij het oplossen van het calciumcarbonaat. Voor een goed begrip van dit product en de <a href="https://www.hydrotechniek.be">SoluCalc CO₂-waterontharder installatie – HydroTech</a>, is het nuttig om de werking ervan beter te begrijpen.</p>
+
+<p>In vergelijking met traditionele waterontharders, zoals ionenwisselaar systemen, biedt de SoluCalc een minder invasieve aanpak. Traditionele systemen gebruiken vaak zout om calcium en magnesium te vervangen, wat niet alleen duurder is, maar ook milieuvervuilend kan zijn. CO₂-waterontharders maken de waterhardheid meer beheersbaar op een natuurlijke manier. Hierdoor zijn ze vriendelijker voor het milieu en ook voor je leidingen en apparaten. Dit innovatieve systeem heeft een unieke manier van werken die steeds meer populariteit wint in huishoudens en bedrijven.</p>
+
+<h2>Specificaties en Ontwerp</h2>
+
+<p>Wat betreft de specificaties en het ontwerp, de SoluCalc heeft passie voor functionaliteit en esthetiek. Het apparaat heeft een compacte vormgeving die perfect past in de meeste ruimten zonder veel ruimte in te nemen. Met afmetingen die doorgaans vergelijkbaar zijn met die van een gemiddelde koelkast, kan het gemakkelijk worden geïntegreerd in je bestaande leidingsysteem. De <strong>ontwerpkenmerken</strong> zijn niet alleen esthetisch aantrekkelijk, maar ook praktisch. Ze zijn ontworpen om eenvoudig toegankelijk te zijn voor onderhoud en inspectie.</p>
+
+<p>De keuze van materialen voor de SoluCalc is een belangrijke factor in de duurzaamheid van het systeem. Het apparaat is gebouwd met robuuste en corrosiebestendige materialen die ervoor zorgen dat het lang meegaat. Dit verhoogt niet alleen de levensduur van de waterontharder, maar garandeert ook een <strong>betrouwbare werking</strong> onder verschillende omstandigheden. Bovendien is het gewicht van de SoluCalc standaard en vereist het geen speciale ondersteuning voor installatie. Dit maakt de installatie eenvoudiger en toegankelijker voor zowel huiseigenaren als professionele installateurs.</p>
+
+<h2>Installatie en Aansluiting</h2>
+
+<p>Voor de installatie van de SoluCalc zijn specifieker leidingsystemen noodzakelijk. Het apparaat kan worden aangesloten op de bestaande waterleidingen zonder ingrijpende modificaties aan je huis. Zorg ervoor dat je de juiste leidingen en koppelingen hebt voordat je met de installatie begint. Deze compatibiliteit maakt het kosteneffectief en tijdbesparend. Ook is het belangrijk om te controleren of je <strong>watertoevoer</strong> in staat is om het apparaat te ondersteunen.</p>
+
+<p>De stappen voor installatie zijn eenvoudig te volgen. Begin met het afsluiten van het water en het op de juiste plaats positioneren van de SoluCalc. Sluit vervolgens de leidingen aan volgens de instructies en controleer of alles juist is aangesloten. Het is goed om te zorgen dat je concrete <strong>installatiegidsen</strong> bij de hand hebt om verwarring te voorkomen. Veel gebruikers kiezen ervoor om enkele simpele gereedschappen te hebben, zoals een sleutel en schroevendraaier, om het proces soepel te laten verlopen.</p>
+
+<h2>Capaciteit en Efficiëntie</h2>
+
+<p>De capaciteit van de SoluCalc waterontharder is een belangrijk aspect voor de prestaties. De maximale waterdoorvoer van het apparaat kan though, wat betekent dat het geschikt is voor zowel kleine als grote huishoudens. Het apparaat kan gemakkelijk grote hoeveelheden water behandelen zonder dat de kwaliteit van het gezuiverde water in gevaar komt. Dit is handig voor gezinnen met hoge waterbehoeften, zoals die met meerdere badkamerfaciliteiten of een onderhoudsbedrijf.</p>
+
+<p>Wat betreft de effectiviteit bij verschillende waterhardheden, blijkt de SoluCalc in staat om zijn werk goed te doen, ongeacht of het water zeer hard of iets minder hard is. Dit maakt het een veelzijdige oplossing voor veel huishoudelijke situaties. Daarnaast is het energieverbruik van de SoluCalc aanzienlijk lager dan dat van traditionele ontharders. Dit draagt bij aan de <strong>milieu-impact</strong>, waardoor het een slimme keuze is voor de milieubewuste consument.</p>
+
+<h2>Veiligheidskenmerken en Certificeringen</h2>
+
+<p>Veiligheid is altijd een prioriteit, vooral als je een systeem installeert dat met drinkwater werkt. De SoluCalc heeft diverse veiligheidssystemen ingebouwd, zoals een overdrukventiel om te zorgen dat het systeem niet overbelast raakt. Deze veiligheidskenmerken geven gemoedsrust aan de gebruiker. Daarnaast kunnen er verschillende certificeringen zijn die bevestigen dat het apparaat voldoet aan de industriestandaarden. Dit is cruciaal om de kwaliteit en betrouwbaarheid van het systeem te waarborgen.</p>
+
+<p>Naast de veiligheidskenmerken biedt de SoluCalc ook <strong>onderhoudsvriendelijke aspecten</strong>. Dit komt onder andere door het ontwerp van het systeem, dat gemakkelijk toegankelijk is voor eventuele inspecties. Regelmatig onderhoud is eenvoudig te realiseren, wat bijdraagt aan de algehele duurzaamheid van het apparaat. Het is altijd goed om op de hoogte te zijn van de beschikbaarheid van certificeringen en standaarden, zodat je kunt vertrouwen op de betrouwbaarheid van jouw waterontharder.</p>
+
+<h2>Onderhoud en Levensduur</h2>
+
+<p>Regelmatig onderhoud is van essentieel belang voor de efficiëntie van de SoluCalc CO₂-waterontharder. Het wordt aanbevolen om eens in de paar maanden visuele inspecties uit te voeren om eventuele problemen vroegtijdig te ontdekken. Schoonmaken van de filters en het controleren van de leidingen kan ervoor zorgen dat het systeem soepel blijft werken. Deze eenvoudige <strong>onderhoudsroutines</strong> kunnen ook helpen om de levensduur van het apparaat te verlengen.</p>
+
+<p>Als vervangingsonderdelen nodig zijn, is de beschikbaarheid belangrijk. De meeste onderdelen van de SoluCalc zijn eenvoudig te vervangen, wat de kosten voor reparaties verlaagt. Consumenten geven vaak aan dat het apparaat zelf een lange levensduur heeft, wat goed nieuws is voor de gebruiker. Het is cruciaal om ook te kijken naar eventuele garantiebepalingen, die variëren maar vaak een extra bescherming bieden tegen onverwachte uitgaven. Hiermee is de SoluCalc niet alleen een investering in een waterontharder, maar ook in een lange-termijn oplossing.</p>
+
+<h2>Kosten en Economische Aspecten</h2>
+
+<p>Bij het overwegen van een nieuwe waterontharder is het belangrijk om de initiële aanschafkosten in ogenschouw te nemen. De SoluCalc is over het algemeen concurrerend geprijsd in vergelijking met andere waterontharders op de markt. Ondanks de hogere initiële kosten ten opzichte van enkele traditionele systemen, kunnen de kosten op lange termijn aanzienlijk lager zijn. Dit komt vooral door de lagere operationele en onderhoudskosten die je ervaart met een CO₂-waterontharder.</p>
+
+<p>De <strong>besparingen op lange termijn</strong> zijn significante voordelen van deze technologie. Doordat de SoluCalc effectiever kalk probleem oplost, bespaar je op schade aan leidingen en huishoudelijke apparaten. Daarnaast, door de energiezuinigheid, zijn de maandelijks terugkerende kosten lager. Dit draagt bij aan een aanzienlijke totaliteit van besparingen gedurende de levensduur van het apparaat, wat het financieel aantrekkelijk maakt. Vergelijk je dit met andere technologieën, dan blijkt de SoluCalc vaak een efficiënte en duurzame keuze te zijn.</p>
+
+<h2>Voor- en Nadelen</h2>
+
+<p>De SoluCalc heeft veel voordelen die het overwegen waard zijn. Ten eerste is het een milieuvriendelijke optie, aangezien het gebruik maakt van natuurlijke CO₂ zonder agressieve chemicaliën. Het voorkomt ook kalkafzetting, wat de levensduur van leidingen en apparaten verlengt. Dit kan op zijn beurt leiden tot lagere onderhoudskosten. Ook geeft het een betere waterkwaliteit, wat vooral belangrijk is voor gezondheid en welzijn.</p>
+
+<p>Toch zijn er ook enkele nadelen te overwegen. Een mogelijk nadeel van de SoluCalc is dat de initiële investeringskosten iets hoger kunnen liggen dan traditionele systemen. Bovendien kan het systeem minder effectief zijn in gebieden met extreem hoge hardheid. Het is cruciaal om de feedback van consumenten te bekijken om hun ervaringen te verzamelen. Veel gebruikers zijn positief over de tevredenheid en effectiviteit van het product, wat de SoluCalc tot een populaire keuze maakt.</p>
+
+<h2>Toepassingsgebieden</h2>
+
+<p>De SoluCalc biedt veel mogelijkheden, zowel voor huishoudelijk gebruik als voor commerciële en industriële toepassingen. In een gezinswoning kan het de algehele waterkwaliteit verbeteren, wat resulteert in betere kook- en drinkervaringen. Omdat het apparaat ook geschikt is voor hogere doorstroming, is het ideaal voor grotere huishoudens. De efficiëntie bij het verwijderen van hardheid maakt het ook een prima keuze voor bedrijven die afhankelijk zijn van hoge kwaliteit water.</p>
+
+<p>Daarnaast kunnen commerciële en industriële instellingen ook profiteren van de SoluCalc. Hij kan worden gebruikt in wasbedrijven, restaurants en productiebedrijven, waar waterhardheid een probleem kan zijn. Daarom past hij zich aan verschillende watersamenstellingen aan, wat de toepasbaarheid verder vergroot. Dit maakt de SoluCalc een veelzijdige oplossing voor een breed scala aan toepassingen, van huishoudelijk gebruik tot grotere commerciële instellingen.</p>
+
+<h2>Innovaties en Toekomstige Ontwikkelingen</h2>
+
+<p>De technologische wereld verandert continu, en de SoluCalc is daar geen uitzondering op. Nieuwe functies en mogelijke upgrades worden regelmatig aangekondigd, die de algehele gebruikservaring kunnen verbeteren. Innovaties zoals verbeterde sensortechnologie of zelfs automatiseringsopties kunnen in de toekomst worden geïntroduceerd. Deze innovaties zijn vaak gericht op gebruiksgemak en efficiëntie, wat de aantrekkingskracht verder vergroot.</p>
+
+<p>Er zijn ook duidelijke trends in CO₂-wateronthardingstechnologie. Duurzaamheid en energie-efficiëntie staan hoog op de agenda voor vele nieuwe ontwikkelingen. Onderzoek en ontwikkeling zijn constant bezig om het waterbeheersysteem te verbeteren. Op deze manier speelt de SoluCalc een belangrijke rol in de toekomst van drinkwaterbehandeling en draagt het bij aan een duurzamer milieu.</p>
+
+            
+
+
+            <br><br> <p>
+                
+
+        
+
+
+<br><br>
+        
+        </p>
+
+        
+        <p><p>Hard water veroorzaakt kalkaanslag in leidingen, huishoudtoestellen en boilers. Dat zorgt niet alleen voor een hoger energieverbruik, maar ook voor een kortere levensduur van je installaties.
+De SoluCalc CO₂-waterontharder biedt een innovatieve en milieuvriendelijke oplossing. In plaats van zout of hars gebruikt dit systeem natuurlijk CO₂ om kalk op een veilige manier om te zetten in oplosbare mineralen.
+
+HydroTech is gespecialiseerd in het plaatsen, onderhouden en herstellen van SoluCalc-installaties in regio Turnhout, Beerse, Gierle, Lille en omgeving, maar ook in Antwerpen en Limburg.
+Het bedrijf staat voor duurzaamheid, innovatie en ecologie, en helpt klanten om op een moderne manier kalkvrij water te krijgen – zonder zout, zonder onderhoud en zonder afval.
+
+<a href="https://www.hydrotechniek.be">Meer informatie vind je op HydroTech</a></p></p>
+    
+
+        
+
+
+             
+           <br> <p>
+            <div class="next">
+       Related article: <a href="https://render-business.onrender.com/waterontharder.html">Read more</a>
+    </div>
+       </p>
+        </div>
+    </div>
+    
+
+    <div class="author-box">
+     
+        <div class="info">
+            <h3>Wouter Jansen</h3>
+            <p>Senior Copywriter</p>
+            <p>Wouter Jansen is een ervaren copywriter gespecialiseerd in milieuvriendelijke technologieën en huishoudelijke innovaties. Met zijn diepgaande kennis over de SoluCalc CO₂-waterontharder, weet hij complexe concepten op een toegankelijke manier uit te leggen. Zijn overtuigende schrijfwerk heeft bijgedragen aan een groter bewustzijn over de voordelen van deze duurzame oplossing en waarom steeds meer gezinnen ervoor kiezen. Wouter's passie voor helder en effectief communiceren maakt hem een waardevolle stem in het promoten van groene technologieën binnen huiselijke omgevingen.</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="column">
+                <h3>Daily Dose of News</h3>
+                <p>&copy; 2025, All Rights Reserved.</p>
+            </div>
+            <div class="column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Advertise with us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Legal Stuff</h3>
+                <ul>
+                    <li><a href="#">Privacy Notice</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Social Media</h3>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    // Select all anchor tags within the div with class 'next'
+    const links = document.querySelectorAll('div.next a');
+
+    // Iterate over each link
+    links.forEach(link => {
+        let href = link.getAttribute('href');
+
+        // Check if href is valid and does not end with .html or any other file extension
+        if (href && !href.endsWith('.html') && !href.match(/\.\w+$/)) {
+            // Add .html extension
+            href += '.html';
+            link.setAttribute('href', href);
+        }
+    });
+});
+
+ </script>
+ 
+</body>
+</html>
