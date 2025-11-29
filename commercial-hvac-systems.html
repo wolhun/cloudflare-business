@@ -1,0 +1,2710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Effects of Cooling Tower Water Quality on HVAC System Efficiency</title>
+
+        <!-- Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+       /* ------------------------------------- */
+/* POPRAWKA 3: STYLOWANIE SCROLLBARA */
+/* Dotyczy Chrome, Safari i innych WebKit */
+/* Kolor jak "JANE DOE" w footerze: #6fd0d6 */
+/* ------------------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6fd0d6; /* Turkusowy kolor */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5abdbd;
+}
+
+/* Dla Firefox (mniej możliwości stylizowania) */
+* {
+    scrollbar-color: #6fd0d6 #f1f1f1;
+    scrollbar-width: thin;
+}
+/* ------------------------------------- */
+
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.container {
+    max-width: 1076px;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    padding: 24px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    flex: 1;
+}
+
+/* NOWY KONTENER DLA PRAWYCH ELEMENTÓW */
+.article-meta-area {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: relative;
+    /* NOWO DODANE: KLUCZOWE DLA UKŁADU SIDEBARA */
+    display: flex; 
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+h1, h2, h3 {
+    font-family: 'Source Serif 4', serif;
+    color: #000000;
+}
+
+
+
+h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #1A73E8;
+  padding-left: 12px;
+    /*margin-top: 28px;*/
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+/* STYLIZACJA BLOCKQUOTE */
+.content blockquote {
+    /* Wyróżnienie wizualne */
+    border-left: 5px solid #6fd0d6; /* Turkusowa, pionowa linia akcentująca */
+    padding: 18px 25px 18px 30px;
+    margin: 30px 0;
+    background-color: #f7f7f7; /* Jasnoszare tło, aby się odcinał */
+    
+    /* Typografia - klucz do unikalności */
+    font-family: 'Source Serif 4', serif; /* Użycie fontu z nagłówków */
+    font-size: 22px; /* Większy rozmiar niż tekst główny */
+    line-height: 1.5;
+    font-style: italic; /* Kursywa dodaje elegancji */
+    font-weight: 500; /* Lżejsza waga niż nagłówki */
+    
+
+}
+
+.content blockquote p {
+    /* Resetujemy margin wewnątrz cytatu, aby nie było podwójnych odstępów */
+    margin: 0;
+    /* ! WAŻNE: Wymuś Source Serif, nadpisując dziedziczenie z .content p (Montserrat) */
+    font-family: 'Source Serif 4', serif !important; 
+    font-style: italic;
+}
+
+/* Opcjonalnie: Stylizacja stopki cytatu (autora) */
+.content blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
+    font-style: normal;
+    
+}
+
+/* ================================================= */
+/* ➡️ STYLIZACJA LISTY NIEUPORZĄDKOWANEJ (<ul>) */
+/* Dodano precyzyjne centrowanie w pionie */
+/* ================================================= */
+
+/* 1. Resetowanie kontenera UL */
+.content ul {
+    list-style: none !important; 
+    padding-left: 0 !important; 
+    margin: 20px 0;
+}
+
+/* 2. Stylowanie elementu listy LI */
+.content ul li {
+    position: relative; 
+    padding-left: 25px; /* Odstęp dla strzałki i marginesu */
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; 
+    
+    /* Upewnij się, że element LI ma wystarczającą wysokość linii, aby ::before miało się do czego centrować */
+    line-height: 1.4; 
+}
+
+/* 3. Generowanie i stylowanie strzałki (►) */
+.content ul li::before {
+    /* WŁAŚCIWOŚCI KLUCZOWE */
+    content: "\25BA"; /* Kod Unicode dla strzałki w prawo (►) */
+    position: absolute;
+    
+    /* Pozycjonowanie i Centrowanie w Pionie */
+    left: 0; 
+    top: 50%; /* Przesunięcie znacznika o połowę wysokości LI */
+    transform: translateY(-50%); /* Cofnięcie go o połowę jego własnej wysokości */
+    
+    /* WŁAŚCIWOŚCI KOLORU I ROZMIARU */
+    color: #222; 
+    font-weight: bold; 
+    font-size: 12px; /* Zmniejszyłem rozmiar czcionki na 12px, aby pasował do wysokości linii tekstu 18px */
+}
+
+
+/* STYLIZACJA LIST UPORZĄDKOWANYCH (<ol>) */
+    .content ol {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.content ol li {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    font-size: 18px; /* Utrzymaj rozmiar P */
+}
+
+/* Wyróżnienie numeru */
+.content ol li::marker {
+    color: #000; /* Czarny numer */
+    font-weight: 700; /* Pogrubienie numeru */
+    font-size: 1em;
+}
+/* ------------------------------------- */
+/* STYLIZACJA TABEL */
+/* ------------------------------------- */
+
+.content table {
+    width: 100%; /* Tabele zawsze zajmują całą dostępną szerokość */
+    margin: 30px 0;
+    border-collapse: collapse; /* Usuwa podwójne linie między komórkami */
+    
+    /* Font z tekstu głównego dla czytelności */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; 
+    line-height: 1.5;
+}
+
+/* NAGŁÓWEK TABELI (thead) */
+.content thead th {
+    background-color: #000; /* Czarne tło dla nagłówka */
+    color: #fff; /* Biały tekst */
+    padding: 12px 18px;
+    text-align: left;
+    font-weight: 700; /* Bardzo pogrubione nagłówki */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+/* KOMÓRKI TABELI (td) */
+.content tbody td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #eee; /* Delikatna linia oddzielająca wiersze */
+    vertical-align: top;
+    color: #333; /* Ciemnoszary tekst dla lepszego kontrastu niż czarny */
+}
+
+/* Wiersze co drugi wiersz (Striping - opcjonalne, ale ułatwia czytanie) */
+.content tbody tr:nth-child(even) {
+    background-color: #fcfcfc; /* Bardzo jasne tło dla parzystych wierszy */
+}
+
+/* Wyróżnienie pierwszego wiersza/kolumny (np. nazwy kategorii) */
+.content tbody tr td:first-child {
+    font-weight: 600; /* Pogrubienie pierwszej kolumny */
+    color: #000;
+}
+
+/* Linia na końcu tabeli - użycie koloru akcentującego */
+.content table {
+    border-bottom: 3px solid #6fd0d6; /* Gruba, turkusowa linia na dole tabeli */
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.meta {
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.content hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.content p {
+    margin: 10px 0;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.4rem;
+    line-height: 1.65;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin: 5px 0;
+}
+
+a {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    border-radius: 0;
+}
+
+/* MENU GŁÓWNE */
+nav {
+    background-color: white;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    
+    /* POPRAWKA: Ustawienie NAV jako kontekstu dla absolutnego pozycjonowania na mobile */
+    position: relative; 
+}
+
+nav .nav-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 12px 14px 12px;
+    border-bottom: 1px solid #efefef;
+    position: relative; /* Umożliwia pozycjonowanie przycisku */
+}
+
+/* POPRAWKA: Styl dla Logo */
+nav .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 1;
+    
+    /* POPRAWKA: Zapobieganie przepełnieniu na desktopie/długim logo */
+    max-width: calc(100% - 24px); 
+    word-break: break-word; 
+    white-space: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav .logo a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* STYL DLA PRZYCISKU SUBSCRIBE */
+.subscribe-btn {
+    position: absolute;
+    right: 10%; /* Zmieniony margines */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000; /* Czarny kolor */
+    color: #fff; /* Biały tekst */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Zmieniony rozmiar czcionki */
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #333;
+}
+/* KONIEC STYLI PRZYCISKU */
+
+
+/* WSPÓLNE MENU DLA MAIN I STICKY */
+.nav-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+.nav-links li {
+    position: relative;
+    padding: 0 14px;
+}
+
+.nav-links li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 18px;
+    background: #d9d9d9;
+}
+
+.nav-links li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 0;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+nav .nav-chev {
+    font-size: 11px;
+    opacity: 0.6;
+    transform: translateY(1px);
+}
+
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+        /* WAŻNE: Na mobile usuwamy padding z kontenera layoutu, 
+        * aby reszta elementów mogła wykorzystać pełną szerokość i kontrolować padding wewnętrznie. */
+        padding: 0; 
+    }
+    
+    /* Dodajemy padding do głównego kontenera artykułu, 
+    * by treści miały marginesy */
+    .container {
+        padding: 24px 12px;
+    }
+    
+    .v-divider {
+        display: none;
+    }
+
+    .article-meta-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px; /* Dajemy padding tylko do article-meta-area */
+    }
+
+    .author-sidebar-wrapper {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: sticky;
+    top: 90px;
+    align-self: flex-start;
+    background: white;
+    padding: 0;
+    margin-bottom: 18px; /* Odstęp między Author Box a TOC */
+}
+
+    .article-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    /* * POPRAWKA DLA AUTOR BOX: Usunięcie przepełnienia horyzontalnego */
+    .author-box {
+    width: 100%; /* Wypełnia szerokość wrappera */
+    margin: 0; /* Usuwamy margin */
+    background-color: white;
+    padding: 16px; /* Zmniejszamy padding, aby pasował do TOC */
+    border: 1px solid #eee;
+    box-shadow: none;
+    border-radius: 0;
+    
+    /* ZMIANA: WŁĄCZENIE UKŁADU POZIOMEGO (ZDJĘCIE PO LEWEJ, TEKST PO PRAWEJ) */
+    display: flex;
+    flex-direction: row; /* Zmieniamy na układ poziomy */
+    align-items: flex-start; /* Elementy wyrównane do góry */
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.author-box img {
+    border-radius: 50%; /* Stylujemy obrazek na okrągły */
+    width: 60px; /* Mniejszy rozmiar */
+    height: 60px;
+    
+    /* ZMIANA: DODANIE MARGINESU ZDJĘCIU, ABY ODSUNĄĆ TEKST */
+    margin-right: 15px; 
+    margin-bottom: 0; 
+    
+    flex-shrink: 0; /* Zapobiega zmniejszaniu się zdjęcia */
+}
+    .author-box .info {
+        /* Pozwalamy info wypełnić pozostałą przestrzeń */
+        flex-grow: 1; 
+        min-width: 0; /* WAŻNE: Zapobiega przepełnieniu tekstu */
+        box-sizing: border-box; 
+    }
+    
+    .author-box .info h3 {
+        font-size: 20px;
+    }
+
+    .author-box .info p {
+        font-size: 14px;
+        /* WAŻNE: Łamanie długich słów, aby zapobiec przepełnieniu */
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+    }
+    
+    /* Resetujemy style dla subscribe-btn na 900px, gdy jest pod logiem */
+    .subscribe-btn {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        right: auto;
+        font-size: 16px;
+    }
+}
+
+/* POPRAWKI MOBILE HEADERA */
+/* ************************************************** */
+/* ZMIANY DLA MOBILE (@media (max-width: 600px)) */
+/* ************************************************** */
+/* ************************************************** */
+/* ZMIANY DLA MOBILE (@media (max-width: 600px)) */
+/* ************************************************** */
+@media (max-width: 600px) {
+    
+    /* 1. KOREKTA PRZEPEŁNIENIA LOGO */
+    nav .logo {
+        line-height: 1.1; 
+        max-width: 90%; 
+        word-break: break-word; 
+        white-space: normal;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40px;
+    }
+    
+    /* 2. REPOZYCJONOWANIE IKONY MENU (Hamburger - Absolutnie, Top Lewo) */
+    /* Upewniamy się, że ikona jest wyświetlona! */
+    .menu-icon {
+        display: block; 
+        position: absolute; 
+        left: 12px; 
+        right: auto; 
+        top: 15px; 
+        transform: none;
+        z-index: 100;
+        /* Ważne: usuwamy wszystkie inne nadpisujące style ukrywające ikonę */
+    }
+    
+    /* 3. REPOZYCJONOWANIE PRZYCISKU SUBSCRIBE (Absolutnie, Top Prawo) */
+    .subscribe-btn {
+        position: absolute;
+        top: 15px; 
+        right: 12px; 
+        transform: none;
+        margin: 0;
+        padding: 8px 14px;
+        font-size: 14px;
+        z-index: 100;
+    }
+    
+    /* 4. DOSTOSOWANIE KONTENERA LOGO (Wyśrodkowane poniżej Top Bar) */
+    nav .nav-top {
+        flex-direction: column; 
+        /* Dodajemy duży padding-top, by zrobić miejsce na absolutny Top Bar */
+        padding: 55px 12px 10px 12px; 
+        align-items: center; 
+        min-height: auto;
+    }
+    
+    nav .logo {
+        order: 2; 
+        margin-top: 10px; 
+    }
+    
+    /* 5. UPEWNIAMY SIĘ, ŻE NAV-CONTAINER JEST ZRESETOWANY */
+    .nav-container {
+        padding: 0;
+        border-top: none;
+        position: static; 
+    }
+    
+    /* TEGO USUWAMY, ABY NIE UKRYWAĆ IKONY:
+    * .nav-container .menu-icon { display: none !important; } 
+    */
+    
+    /* Reszta styli dla menu na mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding-top: 8px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 10px 0;
+    }
+    .nav-links li:not(:last-child)::after {
+        display: none;
+    }
+}
+
+/* STICKY MENU */
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 1000;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(-100%); 
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.sticky-menu.sticky-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- HERO OPENING FULL WIDTH --- */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 68vh;
+    background-image: url('https://image-cloud-server.netlify.app/image_The-Cost-Savings-of-Energy-Efficient-HVAC-Systems-for-Commercial-Buildings.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.35) 0%,
+            rgba(0,0,0,0.55) 50%,
+            rgba(0,0,0,0.75) 100%
+        );
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 16px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-kicker {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: #e53935;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 0;
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(34px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 12px 0;
+    color: #fff;
+    letter-spacing: 0.2px;
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(15px, 2.2vw, 20px);
+    font-weight: 500;
+    line-height: 1.7;
+    opacity: 0.95;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.hero-author-meta {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.hero-author-photo {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+.hero-meta-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    line-height: 1.35;
+}
+.hero-author {
+    font-weight: 600;
+}
+.hero-date {
+    opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+    .hero { min-height: 56vh; }
+    .hero-inner { padding: 36px 14px; }
+}
+
+.share-bar {
+    display: none;
+}
+
+/* LAYOUT: content + pionowy separator + sidebar */
+.page-layout {
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 0 12px;
+    overflow: visible;
+}
+
+.v-divider {
+    width: 1px;
+    background: #e6e6e6;
+    align-self: stretch;
+}
+
+/* NOWY KONTENER DLA PRAWYCH ELEMENTÓW */
+.article-meta-area {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: relative;
+}
+
+/* STYLI DLA AUTHOR BOX W SIDEBARZE */
+.author-sidebar-wrapper {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: static;
+    top: 90px;
+    align-self: flex-start;
+    background: white;
+    padding: 0;
+    margin-bottom: 18px; /* Odstęp między Author Box a TOC */
+}
+
+.author-box {
+    width: 100%; /* Wypełnia szerokość wrappera */
+    margin: 0; /* Usuwamy margin */
+    background-color: white;
+    padding: 16px; /* Zmniejszamy padding, aby pasował do TOC */
+    border: 1px solid #eee;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column; /* Układ pionowy dla elementów info */
+    align-items: flex-start; /* Ustawia elementy na początku */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.author-box img {
+    border-radius: 50%; /* Stylujemy obrazek na okrągły */
+    width: 60px; /* Mniejszy rozmiar */
+    height: 60px;
+    margin-right: 0; /* Usuwamy prawy margin */
+    margin-bottom: 10px; /* Dodajemy dolny margin */
+}
+
+.author-box .info {
+    width: 100%;
+}
+
+.author-box .info h3 {
+    margin: 0;
+    font-size: 17px; /* Mniejsza czcionka */
+    color: #000;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.author-box .info p {
+    margin: 3px 0 8px;
+    color: #222;
+    font-size: 13px; /* Mniejsza czcionka dla bio */
+    font-weight: 400;
+}
+
+.author-box .social-media a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 13px; /* Mniejsza czcionka */
+}
+
+.author-box .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* STYLI DLA SPISU TREŚCI (TOC) */
+.article-sidebar {
+    width: 260px;
+    position: sticky; /* KLUCZOWE: USTAWIA ELEMENT JAKO PRZYKLEJONY */
+    top: 90px; /* Określa, gdzie ma się zatrzymać - 90px od góry viewportu */
+    align-self: flex-start;
+    background: white;
+    padding: 16px;
+    border-radius: 0;
+    border: 1px solid #eee;
+    box-shadow: none;
+  
+}
+
+.toc-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #000;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list li {
+    margin: 6px 0;
+}
+
+.toc-list a {
+    display: block;
+    font-size: 15px;
+    line-height: 1.25;
+    color: #222;
+    font-weight: 500;
+    padding: 6px 6px;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.toc-list a:hover {
+    background: #f4f4f4;
+}
+
+.toc-list a.active {
+    background: #ededed;
+    font-weight: 700;
+}
+
+.reading-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: #222; /* kolor JANE DOE */
+    z-index: 1001;
+    transition: width 0.08s linear;
+    display: none; /* startuje dopiero ze sticky */
+}
+
+
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+    }
+    .v-divider {
+        display: none;
+    }
+
+    .article-meta-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author-sidebar-wrapper {
+        width: 100%;
+        position: static;
+        max-height: none;
+        margin-bottom: 20px;
+        order: -2; /* Umieść Author Box jako pierwszy na małych ekranach */
+    }
+
+    .article-sidebar {
+        width: 100%;
+        position: static; /* RESETUJEMY STICKY DLA MOBILE */
+        max-height: none;
+        order: -1;
+        margin-bottom: 20px;
+        /* Dodajemy box-sizing, aby padding wewnątrz toc nie powodował scrolla */
+        box-sizing: border-box; 
+        padding: 16px 12px;
+    }
+
+    .author-box {
+        flex-direction: row; /* Zmieniamy na układ poziomy na małych ekranach */
+        align-items: center;
+    }
+
+    .author-box img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .author-box .info h3 {
+        font-size: 20px;
+    }
+
+    .author-box .info p {
+        font-size: 14px;
+    }
+}
+
+/* ------------------------------------- */
+/* RELATED ARTICLES SECTION STYLES */
+/* ------------------------------------- */
+.related-articles-section {
+    width: 100%;
+    background-color: #f7f7f7; /* Lekko szare tło dla sekcji */
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.related-articles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px; /* Marginesy boczne jak w page-layout */
+}
+
+.related-articles-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.next {
+    /* Wyrównanie i marginesy */
+    text-align: right; /* Wyrównanie do prawej jest dyskretne */
+    margin: 30px 0 20px 0; 
+    padding-top: 10px; 
+    font-family: 'Montserrat', sans-serif; /* Font Montserrat */
+    /* Subtelne rozdzielenie od reszty tekstu */
+    border-top: 1px solid #e0e0e0; /* Cienka, jasnoszara linia */
+}
+
+.next a {
+    /* Styl tekstu linku */
+    font-family: 'Montserrat', sans-serif; /* Font Montserrat */
+    font-size: 16px;
+    font-weight: 500;
+    color: #888; /* Ciemnoszary, nienachalny kolor */
+    text-decoration: none; /* Usuń domyślne podkreślenie */
+    
+    /* Dodanie subtelnej strzałki w prawo (►) za tekstem */
+    content: " \25BA"; 
+}
+
+.next a:hover {
+    color: #333; /* Delikatnie ciemniejszy kolor przy najechaniu */
+    text-decoration: underline; /* Powrót do podkreślenia przy najechaniu */
+}
+
+.article-card {
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-category {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #e53935;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------------- */
+/* MODAL (POPUP) STYLES */
+/* ------------------------------------- */
+.modal {
+    display: none; /* Ukryty domyślnie */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+    border-radius: 0;
+    text-align: center;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 0;
+    color: #000;
+    line-height: 1.3;
+}
+
+.modal p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.modal-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0;
+}
+
+.modal-form button {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0;
+}
+
+.modal-form button:hover {
+    background-color: #333;
+}
+
+.success-message {
+    color: #17a2b8; /* Turkusowy/niebieski kolor */
+    font-weight: 600;
+    margin-top: 15px;
+    display: none;
+    font-size: 16px;
+}
+
+/* ------------------------------------- */
+
+/* --- STYLI DLA MEGAMENU (ZMODYFIKOWANE DLA POPRAWY POZYCJONOWANIA I ZMIENNEJ LICZBY KOLUMN) --- */
+
+/* Kontener dla rozwijanej sekcji */
+.nav-links li.has-submenu {
+    position: relative;
+}
+
+.nav-links li.has-submenu:hover > .megamenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.megamenu {
+    position: absolute;
+    top: 100%;
+
+    /* Domyślne: lewa krawędź megamenu przy lewej krawędzi LI (dla menu po lewej) */
+    left: 0;
+    transform: translateY(10px);
+
+    z-index: 100;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+    box-sizing: border-box;
+    pointer-events: none;
+
+    /* Maksymalna szerokość, aby nie wychodziło poza ekran na bardzo wąskich monitorach */
+    max-width: calc(100vw - 32px);
+}
+
+/* Wyrównanie do prawej - użyte dla końcowych elementów */
+.nav-links li.has-submenu.align-right .megamenu {
+    left: auto;
+    right: 0; /* Menu zaczepia się do prawej krawędzi LI */
+    transform: translateY(10px);
+}
+
+/* Wyrównanie do środka - użyte dla środkowych elementów menu */
+.nav-links li.has-submenu.align-center .megamenu {
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+}
+
+/* ZMIENNA SZEROKOŚĆ ZALEŻNA OD LICZBY KOLUMN (200px szerokość karty, 20px gap, 20px padding) */
+/* 40px padding w sumie (20px lewo + 20px prawo) */
+/* WZÓR: N * 200px + (N-1) * 20px + 40px padding */
+.megamenu.cols-4 {
+    width: 900px; /* 4 * 200 + 3 * 20 + 40 = 900px */
+}
+.megamenu.cols-3 {
+    width: 680px; /* 3 * 200 + 2 * 20 + 40 = 680px */
+}
+.megamenu.cols-2 {
+    width: 460px; /* 2 * 200 + 1 * 20 + 40 = 460px */
+}
+
+.megamenu .articles-grid {
+    grid-template-columns: repeat(4, 1fr); /* Domyślnie 4 */
+    gap: 20px;
+    margin: 0;
+}
+
+.megamenu.cols-3 .articles-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.megamenu.cols-2 .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Reszta styli dla kart w megamenu */
+.megamenu .article-card {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.megamenu .article-card:hover {
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.megamenu .article-card img {
+    height: 140px;
+}
+
+.megamenu .card-content {
+    padding: 10px 0 0 0;
+}
+
+.megamenu .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Ikonka strzałki w dół */
+.nav-links li a .fa-chevron-down {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+    transform: translateY(1px);
+}
+
+.nav-links li.has-submenu:hover > a .fa-chevron-down {
+    transform: translateY(1px) rotate(180deg);
+}
+
+/* Ukrywanie megamenu na małych ekranach */
+@media (max-width: 900px) {
+    .nav-links li.has-submenu .megamenu {
+        display: none;
+    }
+}
+/* --- KONIEC STYLI MEGAMENU --- */
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 48px 0;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 40px;
+}
+
+footer h3 {
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 14px 0;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer .footer-brand {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+footer p, footer a, footer li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #cfcfcf;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+}
+
+footer .footer-thumb {
+    width: 70px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 0;
+    flex: none;
+    background: #111;
+}
+
+footer .footer-item-title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+footer .footer-item-date {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+footer .comment-author {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6fd0d6;
+    margin-right: 6px;
+}
+
+/* Nowy styl dla przycisku kontaktowego w stopce */
+.contact-btn-footer {
+    background-color: #fff; /* Białe tło */
+    color: #000; /* Czarny tekst */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Usuń podkreślenie linku */
+    display: inline-block; /* Aby przycisk był inline-block */
+    margin-top: 10px; /* Odstęp od tekstu 'We're accepting...' */
+}
+
+.contact-btn-footer:hover {
+    background-color: #f0f0f0; /* Lekko szare tło na hover */
+    color: #000;
+}
+
+
+@media (max-width: 900px) {
+    footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ------------------------------------- */
+/* NOWE STYLE DLA KATEGORII W FOOTERZE */
+/* ------------------------------------- */
+footer .footer-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Odstęp między tagami */
+}
+
+footer .footer-tags-list li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-tags-list a {
+    display: inline-block;
+    background: #222; /* Tło dla tagu */
+    color: #cfcfcf; /* Tekst */
+    font-size: 13px; /* Mniejszy rozmiar */
+    font-weight: 500;
+    padding: 8px 12px;
+    border: 1px solid #444; /* Ramka */
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 1; /* Poprawia wyrównanie */
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+footer .footer-tags-list a:hover {
+    background: #e53935; /* Kolor jak hero-kicker */
+    color: #fff;
+    border-color: #e53935;
+    text-decoration: none;
+}
+
+/* ------------------------------------- */
+/* NOWE STYLE DLA DOLNEJ CZĘŚCI STOPKI (CREDIT BAR) */
+/* ------------------------------------- */
+footer .footer-bottom-bar {
+    border-top: 1px solid #222;
+    padding: 20px 0; /* Zmieniony padding */
+}
+
+footer .footer-bottom-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+}
+
+footer .footer-bottom-links a {
+    color: #cfcfcf;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer .footer-bottom-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    footer .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    footer .footer-bottom-links a {
+        margin: 0 10px;
+    }
+}
+/* ------------------------------------- */
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="nav-top">
+            <div class="logo"><a href="index.html">CFLR News</a></div>
+            <button class="subscribe-btn" id="open-modal-btn">Subscribe</button>
+        </div>
+    
+        <div class="nav-container">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+    
+                <li class="has-submenu" data-category="home-garden">
+                    <a href="home-garden.html">Home &amp; Garden <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="home-garden.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11.jpg" alt="Essential Tips for a Lush Spring Lawn">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Essential Tips for a Lush Spring Lawn</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/22.jpeg" alt="DIY Smart Home: 5 Budget-Friendly Automation Ideas">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">DIY Smart Home: 5 Budget-Friendly Automation Ideas</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/33.jpg.webp" alt="Minimalist Decor Trends for Your Living Room">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Minimalist Decor Trends for Your Living Room</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/44.jpg" alt="The Best Indoor Plants for Low Light Conditions">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">The Best Indoor Plants for Low Light Conditions</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="business">
+                    <a href="business.html">Business <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="business.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/55.webp" alt="Future of Remote Work: Key Challenges and Opportunities">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Future of Remote Work: Key Challenges and Opportunities</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/66.jpeg" alt="Understanding Global Supply Chain Disruptions">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Understanding Global Supply Chain Disruptions</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/77.jpeg" alt="Start-Up Funding: What Investors are Looking for in 2024">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Start-Up Funding: What Investors are Looking for in 2024</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="technology">
+                    <a href="technology.html">Technology <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="technology.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/88.png" alt="The Rise of Generative AI in Creative Industries">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">The Rise of Generative AI in Creative Industries</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/99.jpg" alt="Understanding Next-Gen Cybersecurity Threats">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Understanding Next-Gen Cybersecurity Threats</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/111.jpeg" alt="Space Tourism: Is It the Next Big Thing for Tech?">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Space Tourism: Is It the Next Big Thing for Tech?</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/222.webp" alt="Review: The Latest Foldable Smartphones on the Market">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Review: The Latest Foldable Smartphones on the Market</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="travel">
+                    <a href="travel.html">Travel <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="travel.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/333.webp" alt="Hidden Gems of the Mediterranean Coast">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Hidden Gems of the Mediterranean Coast</h4>
+                                </div>
+                            </a>
+                            <a href="travel.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/444.jpeg" alt="Budget Travel: Exploring Europe by Train">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Budget Travel: Exploring Europe by Train</h4>
+                                </div>
+                            </a>
+                            <a href="travel.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/555.jpg" alt="Top 5 Adventure Destinations for Solo Backpackers">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Top 5 Adventure Destinations for Solo Backpackers</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="health">
+                    <a href="health.html">Health <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="health.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/666.jpg" alt="The Science Behind Intermittent Fasting">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">The Science Behind Intermittent Fasting</h4>
+                                </div>
+                            </a>
+                            <a href="health.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/777.png" alt="Practicing Mindfulness for Better Mental Well-being">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Practicing Mindfulness for Better Mental Well-being</h4>
+                                </div>
+                            </a>
+                            <a href="health.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/888.webp" alt="Boosting Immunity: Foods to Eat This Winter">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Boosting Immunity: Foods to Eat This Winter</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="fashion">
+                    <a href="fashion.html">Fashion <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="fashion.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/999.webp" alt="The Hottest Trends from the Fall/Winter Runways">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">The Hottest Trends from the Fall/Winter Runways</h4>
+                                </div>
+                            </a>
+                            <a href="fashion.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/1111.webp" alt="Sustainable Style: Building an Ethical Wardrobe">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">Sustainable Style: Building an Ethical Wardrobe</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="entertainment">
+                    <a href="entertainment.html">Entertainment <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="entertainment.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/2222.jpg" alt="Review: The Most Anticipated Movies of the Year">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Review: The Most Anticipated Movies of the Year</h4>
+                                </div>
+                            </a>
+                            <a href="entertainment.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/3333.jpg" alt="The Comeback of Vinyl: Why Records are Popular Again">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">The Comeback of Vinyl: Why Records are Popular Again</h4>
+                                </div>
+                            </a>
+                            <a href="entertainment.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/4444.jpg" alt="Top 10 Video Games Dominating the Streaming World">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Top 10 Video Games Dominating the Streaming World</h4>
+                                </div>
+                            </a>
+                            <a href="entertainment.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/5555.webp" alt="Behind the Scenes: A Look at the Latest Blockbuster TV Series">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Behind the Scenes: A Look at the Latest Blockbuster TV Series</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="lifestyle">
+                    <a href="lifestyle.html">Lifestyle <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="lifestyle.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/6666.jpg" alt="Mastering the Art of Work-Life Balance in a Digital Age">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Mastering the Art of Work-Life Balance in a Digital Age</h4>
+                                </div>
+                            </a>
+                            <a href="lifestyle.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/7777.jpg" alt="The Power of Digital Detox: Reclaiming Your Free Time">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">The Power of Digital Detox: Reclaiming Your Free Time</h4>
+                                </div>
+                            </a>
+                            <a href="lifestyle.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/8888.jpeg" alt="Simple Meditation Techniques for Beginners">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Simple Meditation Techniques for Beginners</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="news">
+                    <a href="news.html">News <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="news.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/9999.jpg" alt="Global Leaders Discuss Climate Change Policy at Summit">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Global Leaders Discuss Climate Change Policy at Summit</h4>
+                                </div>
+                            </a>
+                            <a href="news.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11111.png" alt="Local Community Rallies to Save Historic Landmark">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Local Community Rallies to Save Historic Landmark</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="sticky-menu" id="sticky-menu">
+        <div class="nav-container">
+            <div class="menu-icon" id="sticky-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="sticky-nav-list"> 
+    
+                <li class="has-submenu" data-category="home-garden">
+                    <a href="home-garden.html">Home &amp; Garden <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="home-garden.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11.jpg" alt="Essential Tips for a Lush Spring Lawn">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Essential Tips for a Lush Spring Lawn</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/22.jpeg" alt="DIY Smart Home: 5 Budget-Friendly Automation Ideas">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">DIY Smart Home: 5 Budget-Friendly Automation Ideas</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/33.jpg.webp" alt="Minimalist Decor Trends for Your Living Room">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Minimalist Decor Trends for Your Living Room</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/44.jpg" alt="The Best Indoor Plants for Low Light Conditions">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">The Best Indoor Plants for Low Light Conditions</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="business">
+                    <a href="business.html">Business <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="business.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/55.webp" alt="Future of Remote Work: Key Challenges and Opportunities">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Future of Remote Work: Key Challenges and Opportunities</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/66.jpeg" alt="Understanding Global Supply Chain Disruptions">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Understanding Global Supply Chain Disruptions</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/77.jpeg" alt="Start-Up Funding: What Investors are Looking for in 2024">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Start-Up Funding: What Investors are Looking for in 2024</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="technology">
+                    <a href="technology.html">Technology <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="technology.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/88.png" alt="The Rise of Generative AI in Creative Industries">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">The Rise of Generative AI in Creative Industries</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/99.jpg" alt="Understanding Next-Gen Cybersecurity Threats">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Understanding Next-Gen Cybersecurity Threats</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/111.jpeg" alt="Space Tourism: Is It the Next Big Thing for Tech?">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Space Tourism: Is It the Next Big Thing for Tech?</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/222.webp" alt="Review: The Latest Foldable Smartphones on the Market">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Review: The Latest Foldable Smartphones on the Market</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="travel">
+                    <a href="travel.html">Travel <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="travel.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/333.webp" alt="Hidden Gems of the Mediterranean Coast">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Hidden Gems of the Mediterranean Coast</h4>
+                                </div>
+                            </a>
+    
+                            <a href="travel.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/444.jpeg" alt="Budget Travel: Exploring Europe by Train">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Budget Travel: Exploring Europe by Train</h4>
+                                </div>
+                            </a>
+    
+                            <a href="travel.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/555.jpg" alt="Top 5 Adventure Destinations for Solo Backpackers">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Top 5 Adventure Destinations for Solo Backpackers</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="health">
+                    <a href="health.html">Health <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="health.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/666.jpg" alt="The Science Behind Intermittent Fasting">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">The Science Behind Intermittent Fasting</h4>
+                                </div>
+                            </a>
+    
+                            <a href="health.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/777.png" alt="Practicing Mindfulness for Better Mental Well-being">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Practicing Mindfulness for Better Mental Well-being</h4>
+                                </div>
+                            </a>
+    
+                            <a href="health.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/888.webp" alt="Boosting Immunity: Foods to Eat This Winter">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Boosting Immunity: Foods to Eat This Winter</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="fashion">
+                    <a href="fashion.html">Fashion <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="fashion.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/999.webp" alt="The Hottest Trends from the Fall/Winter Runways">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">The Hottest Trends from the Fall/Winter Runways</h4>
+                                </div>
+                            </a>
+    
+                            <a href="fashion.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/1111.webp" alt="Sustainable Style: Building an Ethical Wardrobe">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">Sustainable Style: Building an Ethical Wardrobe</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="entertainment">
+                    <a href="entertainment.html">Entertainment <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="entertainment.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/2222.jpg" alt="Review: The Most Anticipated Movies of the Year">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Review: The Most Anticipated Movies of the Year</h4>
+                                </div>
+                            </a>
+    
+                            <a href="entertainment.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/3333.jpg" alt="The Comeback of Vinyl: Why Records are Popular Again">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">The Comeback of Vinyl: Why Records are Popular Again</h4>
+                                </div>
+                            </a>
+    
+                            <a href="entertainment.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/4444.jpg" alt="Top 10 Video Games Dominating the Streaming World">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Top 10 Video Games Dominating the Streaming World</h4>
+                                </div>
+                            </a>
+    
+                            <a href="entertainment.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/5555.webp" alt="Behind the Scenes: A Look at the Latest Blockbuster TV Series">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Behind the Scenes: A Look at the Latest Blockbuster TV Series</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="lifestyle">
+                    <a href="lifestyle.html">Lifestyle <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="lifestyle.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/6666.jpg" alt="Mastering the Art of Work-Life Balance in a Digital Age">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Mastering the Art of Work-Life Balance in a Digital Age</h4>
+                                </div>
+                            </a>
+    
+                            <a href="lifestyle.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/7777.jpg" alt="The Power of Digital Detox: Reclaiming Your Free Time">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">The Power of Digital Detox: Reclaiming Your Free Time</h4>
+                                </div>
+                            </a>
+    
+                            <a href="lifestyle.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/8888.jpeg" alt="Simple Meditation Techniques for Beginners">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Simple Meditation Techniques for Beginners</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="news">
+                    <a href="news.html">News <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="news.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/9999.jpg" alt="Global Leaders Discuss Climate Change Policy at Summit">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Global Leaders Discuss Climate Change Policy at Summit</h4>
+                                </div>
+                            </a>
+    
+                            <a href="news.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11111.png" alt="Local Community Rallies to Save Historic Landmark">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Local Community Rallies to Save Historic Landmark</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="hero" aria-label="Article opening image">
+        <div class="hero-inner">
+
+            
+    
+      <div class="hero-kicker">business</div>
+    
+      <div class="hero-kicker">technology</div>
+    
+      <div class="hero-kicker">news</div>
+    
+  
+
+            <h1 class="hero-title">The Effects of Cooling Tower Water Quality on HVAC System Efficiency</h1>
+
+            <div class="hero-author-meta">
+                <img
+                    class="hero-author-photo"
+                    src="https://image-cloud-server.netlify.app/copywriter4.webp"
+                    alt="Photo of Ethan Caldwell"
+                    loading="lazy"
+                    style="border-radius:50%; object-fit:cover;"
+                >
+                <div class="hero-meta-text">
+                    <span class="hero-author">By Ethan Caldwell</span>
+                    <span class="hero-date">29 November 2025 · 5 min read</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="page-layout">
+
+        <div class="container">
+            <div class="content" id="article-content">
+                <h2>How Does Cooling Tower Water Quality Impact HVAC Performance?</h2>
+
+<p>Cooling tower water quality significantly affects HVAC system efficiency. <strong>Contaminated water</strong> can lead to scale formation, corrosion, and biological growth. Scale buildup reduces heat transfer efficiency, causing the system to work harder. For instance, a mere <strong>0.1-inch layer of scale</strong> can decrease heat transfer efficiency by <strong>10%</strong>. Consequently, this increases energy consumption and operational costs.</p>
+
+<p>Additionally, <strong>poor water quality</strong> can result in equipment damage. Corroded components not only reduce lifespan but also require costly repairs. Regular water treatment and monitoring can prevent these issues. Implementing a <strong>proper maintenance schedule</strong> ensures optimal water quality, thus enhancing overall HVAC performance. Efficient systems save energy and reduce greenhouse gas emissions, contributing to a more sustainable operation.</p>
+
+<h2>What Are the Key Water Quality Parameters Affecting HVAC Efficiency?</h2>
+
+<ul>
+<li><p><strong>pH Level</strong>: The pH level of cooling tower water should ideally remain between 6.5 and 8.5. Deviations can lead to corrosion of metal components and scaling, negatively affecting heat exchange efficiency.</p></li>
+<li><p><strong>Conductivity</strong>: High conductivity indicates the presence of dissolved solids, which can lead to scaling and corrosion. Maintaining low conductivity levels helps ensure optimal heat transfer and system longevity.</p></li>
+<li><p><strong>Turbidity</strong>: Turbidity measures the clarity of water and is affected by suspended particles. High turbidity can hinder heat transfer efficiency and promote biological growth, leading to further complications in HVAC operations.</p></li>
+<li><p><strong>Total Dissolved Solids (TDS)</strong>: TDS levels reflect the concentration of dissolved substances in water. Elevated TDS can cause scaling and fouling, reducing system efficiency and increasing maintenance costs.</p></li>
+<li><p><strong>Hardness</strong>: Water hardness is primarily due to calcium and magnesium ions. Excessive hardness can lead to scale formation on heat exchangers, adversely impacting thermal performance and energy consumption.</p></li>
+</ul>
+
+<h2>How Do Contaminants in Cooling Tower Water Affect HVAC Systems?</h2>
+
+<p>Cooling tower water can harbor various contaminants that significantly diminish HVAC efficiency. <strong>Scale</strong>, primarily composed of calcium carbonate, accumulates on heat exchange surfaces, leading to reduced thermal conductivity. This buildup can cause a decrease in heat transfer efficiency by up to <strong>30%</strong>, forcing HVAC systems to work harder and consume more energy.</p>
+
+<p><strong>Corrosion</strong> is another critical concern, often resulting from the presence of dissolved oxygen and chlorides in the water. Corroded components can lead to leaks and failures, increasing maintenance costs. Studies show that corrosion can reduce the lifespan of HVAC equipment by approximately <strong>40%</strong>, emphasizing the need for effective water treatment strategies.</p>
+
+<p>Biological growth, including algae and bacteria, can also obstruct cooling tower performance. These organisms thrive in warm, nutrient-rich environments, leading to biofilm formation that impedes water flow. The presence of biofilms can increase energy consumption by <strong>20-50%</strong> due to decreased cooling efficiency.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contaminant Type</th>
+      <th>Impact on HVAC Efficiency</th>
+      <th>Potential Energy Loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Scale</td>
+      <td>Reduces heat transfer efficiency</td>
+      <td>Up to 30%</td>
+    </tr>
+    <tr>
+      <td>Corrosion</td>
+      <td>Increases maintenance costs, reduces lifespan</td>
+      <td>Approx. 40%</td>
+    </tr>
+    <tr>
+      <td>Biological Growth</td>
+      <td>Obstructs water flow and cooling capacity</td>
+      <td>20-50%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>What Are the Best Practices for Maintaining Cooling Tower Water Quality?</h2>
+
+<h3>1. Regular Water Testing</h3>
+
+<p>Frequent testing of cooling tower water is essential for maintaining optimal quality. Tests should include parameters like pH, conductivity, and microbial content. Conducting tests bi-weekly ensures that any deviations from the ideal conditions are promptly addressed.</p>
+
+<h3>2. Chemical Treatment</h3>
+
+<p>Implementing a chemical treatment program can effectively control scale, corrosion, and microbial growth. Common additives include biocides, scale inhibitors, and corrosion inhibitors. Following manufacturer guidelines for dosage and monitoring is crucial for achieving the desired results.</p>
+
+<h3>3. Routine Cleaning and Maintenance</h3>
+
+<p>Scheduled cleaning of cooling tower components, including fill media and basins, helps remove biofilms and sediment buildup. A thorough cleaning every six months enhances water circulation and heat transfer efficiency, ultimately improving HVAC performance.</p>
+
+<h3>4. Optimize Water Usage</h3>
+
+<p>Minimizing water loss through evaporation and drift is vital. Techniques such as drift eliminators and optimizing the water-to-air ratio can reduce water consumption. Implementing these measures not only preserves water quality but also lowers operational costs.</p>
+
+<h3>5. Monitor Environmental Factors</h3>
+
+<p>Environmental conditions such as temperature and humidity can influence cooling tower performance. Regularly monitoring these factors helps in adjusting operational parameters, ensuring that water quality remains within optimal ranges for efficient HVAC operation.</p>
+
+<h2>How Can Water Treatment Technologies Improve Cooling Tower Efficiency?</h2>
+
+<h3>1. Chemical Treatment</h3>
+
+<p>Chemical treatment involves using biocides, corrosion inhibitors, and scale control agents to enhance water quality. <strong>Biocides</strong> effectively reduce microbial growth, preventing biofilm formation. <strong>Corrosion inhibitors</strong> protect metal components from damage, while <strong>scale control agents</strong> minimize mineral deposits that can hinder heat exchange efficiency. Regular monitoring of chemical levels ensures optimal performance and prolongs the lifespan of cooling equipment.</p>
+
+<h3>2. Physical Treatment</h3>
+
+<p>Physical treatment methods utilize filtration and sedimentation to remove suspended solids and impurities. <strong>Filtration systems</strong>, such as sand filters or cartridge filters, capture particulate matter, improving water clarity and quality. <strong>Sedimentation</strong> allows heavier particles to settle, reducing turbidity. Combining these methods can significantly enhance overall cooling tower performance by ensuring cleaner water circulates through the system.</p>
+
+<h3>3. Advanced Oxidation Processes (AOP)</h3>
+
+<p>Advanced Oxidation Processes (AOP) leverage powerful oxidants to degrade organic contaminants and pathogens. AOP systems often use ozone or hydrogen peroxide combined with ultraviolet light to enhance disinfection capabilities. The effectiveness of AOP in breaking down complex organic molecules leads to improved water quality, reducing the frequency of chemical treatments and enhancing HVAC efficiency.</p>
+
+<h3>4. Reverse Osmosis (RO)</h3>
+
+<p>Reverse osmosis is a membrane filtration technology that effectively removes dissolved solids and contaminants from water. <strong>RO systems</strong> provide high-quality feed water for cooling towers, reducing scaling and corrosion risks. Implementing RO can lead to lower chemical usage and improved heat transfer efficiency, significantly boosting HVAC performance.</p>
+
+<h3>5. Biological Treatment</h3>
+
+<p>Biological treatment leverages microorganisms to degrade organic matter and control nutrient levels in cooling tower water. <strong>Bioaugmentation</strong> introduces specific strains of bacteria that enhance the natural breakdown of contaminants. This method can improve water quality while reducing reliance on harsh chemicals, promoting a more sustainable approach to cooling tower maintenance.</p>
+
+<h2>What Are the Economic Implications of Poor Cooling Tower Water Quality?</h2>
+
+<p><strong>Poor cooling tower water quality significantly impacts HVAC operational costs.</strong> High levels of contaminants lead to increased wear on components, resulting in more frequent repairs and replacements. For instance, scale buildup from hard water can reduce heat exchange efficiency, causing chillers to work harder and consume more energy. This inefficiency can raise energy bills by as much as <strong>30%</strong>, depending on the severity of the scaling.</p>
+
+<p><strong>Additionally, maintenance expenses escalate due to the need for regular cleaning and chemical treatments.</strong> Chemical dosing and filtration systems require investment and ongoing costs. A study showed that facilities with unmonitored water quality spent up to <strong>15% more</strong> on maintenance compared to those that adhered to water quality standards. This financial burden can strain budgets and reduce overall profitability.</p>
+
+<h2>How to Monitor and Test Cooling Tower Water Quality Effectively?</h2>
+
+<blockquote>
+<p>Regular monitoring and testing of cooling tower water quality are essential for optimal HVAC performance. Employing advanced testing methods allows for early detection of contaminants, ensuring system efficiency and longevity.</p>
+<cite>Dr. Clara Hensley</cite>
+</blockquote>
+
+<p>Monitoring cooling tower water quality involves a combination of visual inspections, chemical testing, and microbial assessments. <strong>Visual inspections</strong> can identify visible algae growth or scale buildup, which may indicate underlying issues. Utilizing <strong>chemical testing kits</strong> helps measure parameters such as pH, conductivity, and concentrations of biocides. These tests should occur at regular intervals to track changes over time.</p>
+
+<p>For microbial assessments, <strong>ATP (adenosine triphosphate) testing</strong> provides a quick measure of biological contamination levels. Implementing a <strong>data logging system</strong> can also enhance monitoring efforts. This system collects and analyzes data over time, enabling trends to be identified. Combining these techniques leads to comprehensive insights into the cooling tower's water quality.</p>
+
+<h2>What Case Studies Highlight the Importance of Cooling Tower Water Quality?</h2>
+
+<p><strong>Case studies illustrate the significant impact of water quality on HVAC system efficiency.</strong> For instance, a large commercial building in Chicago faced continuous cooling issues due to high levels of calcium and magnesium in its cooling tower water. The buildup of scale not only reduced heat transfer efficiency but also increased energy consumption by approximately <strong>15%</strong>. After implementing a water treatment program that included softening and regular monitoring, energy costs decreased, and the system's performance improved significantly.</p>
+
+<p>Another example comes from a manufacturing facility in Texas that experienced frequent equipment failures attributed to microbial contamination in the cooling tower. The presence of bacteria led to corrosion and fouling, resulting in an estimated <strong>$50,000</strong> in repair costs over a year. Following the introduction of biocide treatments and enhanced filtration, the facility reported a <strong>30%</strong> reduction in maintenance costs and improved overall HVAC reliability.</p>
+
+<p><strong>These real-world examples underscore the necessity of maintaining optimal cooling tower water quality.</strong> Effective water treatment not only enhances system performance but also reduces operational costs and prolongs equipment lifespan. Organizations that prioritize water quality management can achieve substantial savings and improved efficiency in their HVAC systems.</p>
+
+            
+        
+
+                <br><br> <p>
+                    
+                    Are you looking for professional services? Find more details here:
+                    
+
+                    
+                        <a href="https://lightningmechanicalservice.com">https://lightningmechanicalservice.com</a><br>
+                    
+                    <br><br>
+                </p>
+
+                
+                    <p><p><b>Lightning Mechanical LLC</b><br>
+65 Newark Way, Maplewood, NJ 07040, United States<br>
++19737630300
+<br><br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7774815648963!2d-74.26284782388525!3d40.717426871392796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3acfe603b6369%3A0x7cb363adfdab0e50!2sLightning%20Mechanical%20LLC!5e1!3m2!1sen!2spl!4v1764441896720!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "Lightning Mechanical LLC",
+  "url": "https://lightningmechanicalservice.com",
+  "telephone": "+1-973-763-0300",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "65 Newark Way",
+    "addressLocality": "Maplewood",
+    "addressRegion": "NJ",
+    "postalCode": "07040",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ]
+}
+</script></p></p>
+                
+
+                
+
+                
+
+                <br> <p>
+                    <div class="next">
+                        Related article: <a href="https://render-business.onrender.com/commercial-hvac-systems.html">Read more</a>
+                    </div>
+                </p>
+            </div>
+        </div>
+
+        <div class="v-divider" aria-hidden="true"></div>
+
+        <div class="article-meta-area">
+            
+            <div class="author-sidebar-wrapper">
+                <div class="author-box">
+                    <img
+                        src="https://image-cloud-server.netlify.app/copywriter4.webp"
+                        alt="Photo of Ethan Caldwell"
+                        loading="lazy"
+                    >
+                    <div class="info">
+                        <h3>Ethan Caldwell</h3>
+                        <p>Senior Copywriter</p>
+                        <p>Ethan Caldwell is a seasoned copywriter specializing in the intricacies of commercial HVAC systems. With a deep understanding of topics ranging from HVAC load shifting strategies and sensor data accuracy to innovative micro zoning approaches for large office campuses, Ethan crafts compelling content that demystifies complex concepts for industry professionals. His expertise extends to predictive filter life modeling, identifying stale air pockets, and detecting unauthorized HVAC modifications, making him a sought-after voice in the field. Ethan's work not only highlights the technical nuances of HVAC systems but also offers actionable insights into optimizing energy efficiency and operational effectiveness in commercial buildings.</p>
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                            <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                            <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <aside class="article-sidebar" id="toc-sidebar"></aside>
+
+        </div>
+        </div>
+        <section class="related-articles-section">
+            <div class="related-articles-container">
+                <div class="related-articles-title">Trending topics</div>
+                
+                <div class="articles-grid">
+                    
+                    <a href="#" class="article-card">
+                        <img src="https://image-cloud-server.netlify.app/11111.png" alt="Local Community Rallies to Save Historic Landmark">
+                        <div class="card-content">
+                            <span class="card-category">News</span>
+                            <h4 class="card-title">Local Community Rallies to Save Historic Landmark</h4>
+                        </div>
+                    </a>
+        
+                    <a href="#" class="article-card">
+                        <img src="https://image-cloud-server.netlify.app/222.webp" alt="Review: The Latest Foldable Smartphones on the Market">
+                        <div class="card-content">
+                            <span class="card-category">Technology</span>
+                            <h4 class="card-title">Review: The Latest Foldable Smartphones on the Market</h4>
+                        </div>
+                    </a>
+        
+                    <a href="#" class="article-card">
+                        <img src="https://image-cloud-server.netlify.app/6666.jpg" alt="Mastering the Art of Work-Life Balance in a Digital Age">
+                        <div class="card-content">
+                            <span class="card-category">Lifestyle</span>
+                            <h4 class="card-title">Mastering the Art of Work-Life Balance in a Digital Age</h4>
+                        </div>
+                    </a>
+        
+                </div>
+            </div>
+        </section>
+    
+
+    <div id="newsletter-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Add your email to our magazine newsletter</h2>
+            <p>
+                Get the latest articles, exclusive interviews, and trends delivered straight to your inbox.
+                Subscribe now to stay updated with the CFLR News magazine.
+            </p>
+            <form id="subscribe-form" class="modal-form">
+                <input type="email" id="email-input" placeholder="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div id="success-message" class="success-message">
+                Thank you for subscribing! Please check your email inbox to confirm your address.
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+
+            <div>
+                <h3>About us</h3>
+                <div class="footer-brand">Newsboard</div>
+                <p>Your source for the lifestyle news. This demo is crafted specifically to exhibit the use of the theme as a lifestyle site. Visit our main page for more demos.</p>
+                <p>We're accepting new partnerships right now.</p>
+                <a href="contact.html" class="contact-btn-footer">Contact Us</a>
+            </div>
+
+            <div>
+                <h3>Our picks</h3>
+            
+                <div class="footer-item">
+                    <img class="footer-thumb" src="https://image-cloud-server.netlify.app/9999.jpg" alt="Global Leaders Discuss Climate Change Policy at Summit">
+                    <div>
+                        <div class="footer-item-title">Global Leaders Discuss Climate Change Policy at Summit</div>
+                    </div>
+                </div>
+            
+                <div class="footer-item">
+                    <img class="footer-thumb" src="https://image-cloud-server.netlify.app/333.webp" alt="Hidden Gems of the Mediterranean Coast">
+                    <div>
+                        <div class="footer-item-title">Hidden Gems of the Mediterranean Coast</div>
+                    </div>
+                </div>
+            
+                <div class="footer-item">
+                    <img class="footer-thumb" src="https://image-cloud-server.netlify.app/99.jpg" alt="Understanding Next-Gen Cybersecurity Threats">
+                    <div>
+                        <div class="footer-item-title">Understanding Next-Gen Cybersecurity Threats</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Categories</h3>
+                <ul class="footer-tags-list">
+                    <li><a href="home-garden.html">Home &amp; Garden</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="health.html">Health</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="lifestyle.html">Lifestyle</a></li>
+                    <li><a href="news.html">News</a></li>
+                
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-inner">
+                <div>
+                    2025 © All Rights Reserved
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="index.html">Home</a>
+                    <a href="#">About us</a>
+                    <a href="#">Our Team</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funkcja do przełączania mobile menu dla głównej nav
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Funkcja do przełączania mobile menu dla sticky nav
+        document.getElementById('sticky-menu-icon').addEventListener('click', function () {
+            var navLinks = document.getElementById('sticky-nav-list');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Logika dla sticky menu
+        document.addEventListener("DOMContentLoaded", function () {
+            const stickyMenu = document.getElementById("sticky-menu");
+            const scrollThreshold = 250; 
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > scrollThreshold) {
+                    stickyMenu.classList.add("sticky-active");
+                } else {
+                    stickyMenu.classList.remove("sticky-active");
+                }
+            });
+        });
+    </script>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('div.next a');
+            links.forEach(link => {
+                let href = link.getAttribute('href');
+                if (href && !href.endsWith('.html') && !href.match(/\.\w+$/)) {
+                    href += '.html';
+                    link.setAttribute('href', href);
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("newsletter-modal");
+            const openBtn = document.getElementById("open-modal-btn");
+            const closeBtn = document.querySelector(".modal-close");
+            const form = document.getElementById("subscribe-form");
+            const successMessage = document.getElementById("success-message");
+
+            // Otwieranie modalu
+            openBtn.onclick = function() {
+                modal.style.display = "block";
+                form.style.display = "block"; // Resetuje formularz
+                successMessage.style.display = "none"; // Ukrywa komunikat sukcesu
+                form.reset(); // Czyści pole email
+            }
+
+            // Zamykanie modalu przy kliknięciu "x"
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Zamykanie modalu przy kliknięciu poza oknem
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Obsługa fikcyjnej subskrypcji
+            form.onsubmit = function(event) {
+                event.preventDefault(); // Zapobiega przeładowaniu strony
+                
+                // Ukrycie formularza i wyświetlenie komunikatu sukcesu
+                form.style.display = "none";
+                successMessage.style.display = "block";
+            }
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+        const contentEl = document.getElementById("article-content");
+        const tocSidebar = document.getElementById("toc-sidebar");
+        const stickyMenu = document.getElementById("sticky-menu");
+        if (!contentEl || !tocSidebar || !stickyMenu) return;
+    
+        /* Progress bar tworzony i wpinany do sticky menu */
+        const progressBar = document.createElement("div");
+        progressBar.className = "reading-progress";
+        stickyMenu.appendChild(progressBar);
+    
+        const headings = Array.from(contentEl.querySelectorAll("h2"));
+        if (headings.length === 0) {
+            tocSidebar.style.display = "none";
+            return;
+        }
+    
+        const slugify = (str) =>
+            str.toLowerCase()
+               .trim()
+               .replace(/[^\w\s-ąćęłńóśżź]/g, "")
+               .replace(/\s+/g, "-")
+               .replace(/-+/g, "-");
+    
+        headings.forEach((h2, i) => {
+            if (!h2.id) {
+                const base = slugify(h2.textContent || `section-${i+1}`);
+                let id = base || `section-${i+1}`;
+                let counter = 1;
+                while (document.getElementById(id)) {
+                    id = `${base}-${counter++}`;
+                }
+                h2.id = id;
+            }
+        });
+    
+        const titleEl = document.createElement("div");
+        titleEl.className = "toc-title";
+        titleEl.textContent = "Table of contents";
+        tocSidebar.appendChild(titleEl);
+    
+        const ul = document.createElement("ul");
+        ul.className = "toc-list";
+    
+        const links = headings.map(h2 => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = `#${h2.id}`;
+            a.textContent = h2.textContent;
+    
+            a.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.getElementById(h2.id).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+                history.replaceState(null, "", `#${h2.id}`);
+            });
+    
+            li.appendChild(a);
+            ul.appendChild(li);
+            return a;
+        });
+    
+        tocSidebar.appendChild(ul);
+    
+        const setActive = (id) => {
+            links.forEach(a => {
+                a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+            });
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+            const visible = entries
+                .filter(e => e.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    
+            if (visible) setActive(visible.target.id);
+        }, {
+            rootMargin: "0px 0px -65% 0px",
+            threshold: [0.1, 0.25, 0.5, 0.75, 1.0]
+        });
+    
+        headings.forEach(h2 => observer.observe(h2));
+    
+        const updateProgress = () => {
+            const stickyActive = stickyMenu.classList.contains("sticky-active");
+    
+            if (!stickyActive) {
+                progressBar.style.display = "none";
+                progressBar.style.width = "0%";
+                return;
+            }
+    
+            progressBar.style.display = "block";
+    
+            const rect = contentEl.getBoundingClientRect();
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const contentTop = scrollTop + rect.top;
+            const contentHeight = contentEl.scrollHeight;
+            const viewportHeight = window.innerHeight;
+    
+            const maxScroll = contentHeight - viewportHeight;
+            const current = Math.min(Math.max(scrollTop - contentTop, 0), maxScroll);
+    
+            const percent = maxScroll > 0 ? (current / maxScroll) * 100 : 0;
+            progressBar.style.width = `${percent}%`;
+        };
+    
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+    
+        if (location.hash) {
+            const targetId = location.hash.replace("#", "");
+            if (document.getElementById(targetId)) {
+                setActive(targetId);
+            }
+        } else {
+            setActive(headings[0].id);
+        }
+    });
+    </script>
+    
+
+</body>
+</html>
