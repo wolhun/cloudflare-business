@@ -1,0 +1,2703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide to Choosing the Right Supplement Manufacturing Format for Your Brand</title>
+
+        <!-- Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+       /* ------------------------------------- */
+/* POPRAWKA 3: STYLOWANIE SCROLLBARA */
+/* Dotyczy Chrome, Safari i innych WebKit */
+/* Kolor jak "JANE DOE" w footerze: #6fd0d6 */
+/* ------------------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6fd0d6; /* Turkusowy kolor */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5abdbd;
+}
+
+/* Dla Firefox (mniej możliwości stylizowania) */
+* {
+    scrollbar-color: #6fd0d6 #f1f1f1;
+    scrollbar-width: thin;
+}
+/* ------------------------------------- */
+
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.container {
+    max-width: 1076px;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    padding: 24px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    flex: 1;
+}
+
+/* NOWY KONTENER DLA PRAWYCH ELEMENTÓW */
+.article-meta-area {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: relative;
+    /* NOWO DODANE: KLUCZOWE DLA UKŁADU SIDEBARA */
+    display: flex; 
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+h1, h2, h3 {
+    font-family: 'Source Serif 4', serif;
+    color: #000000;
+}
+
+
+
+h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #1A73E8;
+  padding-left: 12px;
+    /*margin-top: 28px;*/
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+/* STYLIZACJA BLOCKQUOTE */
+.content blockquote {
+    /* Wyróżnienie wizualne */
+    border-left: 5px solid #6fd0d6; /* Turkusowa, pionowa linia akcentująca */
+    padding: 18px 25px 18px 30px;
+    margin: 30px 0;
+    background-color: #f7f7f7; /* Jasnoszare tło, aby się odcinał */
+    
+    /* Typografia - klucz do unikalności */
+    font-family: 'Source Serif 4', serif; /* Użycie fontu z nagłówków */
+    font-size: 22px; /* Większy rozmiar niż tekst główny */
+    line-height: 1.5;
+    font-style: italic; /* Kursywa dodaje elegancji */
+    font-weight: 500; /* Lżejsza waga niż nagłówki */
+    
+
+}
+
+.content blockquote p {
+    /* Resetujemy margin wewnątrz cytatu, aby nie było podwójnych odstępów */
+    margin: 0;
+    /* ! WAŻNE: Wymuś Source Serif, nadpisując dziedziczenie z .content p (Montserrat) */
+    font-family: 'Source Serif 4', serif !important; 
+    font-style: italic;
+}
+
+/* Opcjonalnie: Stylizacja stopki cytatu (autora) */
+.content blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif !important;
+    font-style: normal;
+    
+}
+
+/* ================================================= */
+/* ➡️ STYLIZACJA LISTY NIEUPORZĄDKOWANEJ (<ul>) */
+/* Dodano precyzyjne centrowanie w pionie */
+/* ================================================= */
+
+/* 1. Resetowanie kontenera UL */
+.content ul {
+    list-style: none !important; 
+    padding-left: 0 !important; 
+    margin: 20px 0;
+}
+
+/* 2. Stylowanie elementu listy LI */
+.content ul li {
+    position: relative; 
+    padding-left: 25px; /* Odstęp dla strzałki i marginesu */
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; 
+    
+    /* Upewnij się, że element LI ma wystarczającą wysokość linii, aby ::before miało się do czego centrować */
+    line-height: 1.4; 
+}
+
+/* 3. Generowanie i stylowanie strzałki (►) */
+.content ul li::before {
+    /* WŁAŚCIWOŚCI KLUCZOWE */
+    content: "\25BA"; /* Kod Unicode dla strzałki w prawo (►) */
+    position: absolute;
+    
+    /* Pozycjonowanie i Centrowanie w Pionie */
+    left: 0; 
+    top: 50%; /* Przesunięcie znacznika o połowę wysokości LI */
+    transform: translateY(-50%); /* Cofnięcie go o połowę jego własnej wysokości */
+    
+    /* WŁAŚCIWOŚCI KOLORU I ROZMIARU */
+    color: #222; 
+    font-weight: bold; 
+    font-size: 12px; /* Zmniejszyłem rozmiar czcionki na 12px, aby pasował do wysokości linii tekstu 18px */
+}
+
+
+/* STYLIZACJA LIST UPORZĄDKOWANYCH (<ol>) */
+    .content ol {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.content ol li {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    font-size: 18px; /* Utrzymaj rozmiar P */
+}
+
+/* Wyróżnienie numeru */
+.content ol li::marker {
+    color: #000; /* Czarny numer */
+    font-weight: 700; /* Pogrubienie numeru */
+    font-size: 1em;
+}
+/* ------------------------------------- */
+/* STYLIZACJA TABEL */
+/* ------------------------------------- */
+
+.content table {
+    width: 100%; /* Tabele zawsze zajmują całą dostępną szerokość */
+    margin: 30px 0;
+    border-collapse: collapse; /* Usuwa podwójne linie między komórkami */
+    
+    /* Font z tekstu głównego dla czytelności */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; 
+    line-height: 1.5;
+}
+
+/* NAGŁÓWEK TABELI (thead) */
+.content thead th {
+    background-color: #000; /* Czarne tło dla nagłówka */
+    color: #fff; /* Biały tekst */
+    padding: 12px 18px;
+    text-align: left;
+    font-weight: 700; /* Bardzo pogrubione nagłówki */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+/* KOMÓRKI TABELI (td) */
+.content tbody td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #eee; /* Delikatna linia oddzielająca wiersze */
+    vertical-align: top;
+    color: #333; /* Ciemnoszary tekst dla lepszego kontrastu niż czarny */
+}
+
+/* Wiersze co drugi wiersz (Striping - opcjonalne, ale ułatwia czytanie) */
+.content tbody tr:nth-child(even) {
+    background-color: #fcfcfc; /* Bardzo jasne tło dla parzystych wierszy */
+}
+
+/* Wyróżnienie pierwszego wiersza/kolumny (np. nazwy kategorii) */
+.content tbody tr td:first-child {
+    font-weight: 600; /* Pogrubienie pierwszej kolumny */
+    color: #000;
+}
+
+/* Linia na końcu tabeli - użycie koloru akcentującego */
+.content table {
+    border-bottom: 3px solid #6fd0d6; /* Gruba, turkusowa linia na dole tabeli */
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.meta {
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.content hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.content p {
+    margin: 10px 0;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.4rem;
+    line-height: 1.65;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin: 5px 0;
+}
+
+a {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    border-radius: 0;
+}
+
+/* MENU GŁÓWNE */
+nav {
+    background-color: white;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    
+    /* POPRAWKA: Ustawienie NAV jako kontekstu dla absolutnego pozycjonowania na mobile */
+    position: relative; 
+}
+
+nav .nav-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 12px 14px 12px;
+    border-bottom: 1px solid #efefef;
+    position: relative; /* Umożliwia pozycjonowanie przycisku */
+}
+
+/* POPRAWKA: Styl dla Logo */
+nav .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 1;
+    
+    /* POPRAWKA: Zapobieganie przepełnieniu na desktopie/długim logo */
+    max-width: calc(100% - 24px); 
+    word-break: break-word; 
+    white-space: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav .logo a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* STYL DLA PRZYCISKU SUBSCRIBE */
+.subscribe-btn {
+    position: absolute;
+    right: 10%; /* Zmieniony margines */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000; /* Czarny kolor */
+    color: #fff; /* Biały tekst */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Zmieniony rozmiar czcionki */
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #333;
+}
+/* KONIEC STYLI PRZYCISKU */
+
+
+/* WSPÓLNE MENU DLA MAIN I STICKY */
+.nav-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+.nav-links li {
+    position: relative;
+    padding: 0 14px;
+}
+
+.nav-links li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 18px;
+    background: #d9d9d9;
+}
+
+.nav-links li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 0;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+nav .nav-chev {
+    font-size: 11px;
+    opacity: 0.6;
+    transform: translateY(1px);
+}
+
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+        /* WAŻNE: Na mobile usuwamy padding z kontenera layoutu, 
+        * aby reszta elementów mogła wykorzystać pełną szerokość i kontrolować padding wewnętrznie. */
+        padding: 0; 
+    }
+    
+    /* Dodajemy padding do głównego kontenera artykułu, 
+    * by treści miały marginesy */
+    .container {
+        padding: 24px 12px;
+    }
+    
+    .v-divider {
+        display: none;
+    }
+
+    .article-meta-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px; /* Dajemy padding tylko do article-meta-area */
+    }
+
+    .author-sidebar-wrapper {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: sticky;
+    top: 90px;
+    align-self: flex-start;
+    background: white;
+    padding: 0;
+    margin-bottom: 18px; /* Odstęp między Author Box a TOC */
+}
+
+    .article-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    /* * POPRAWKA DLA AUTOR BOX: Usunięcie przepełnienia horyzontalnego */
+    .author-box {
+    width: 100%; /* Wypełnia szerokość wrappera */
+    margin: 0; /* Usuwamy margin */
+    background-color: white;
+    padding: 16px; /* Zmniejszamy padding, aby pasował do TOC */
+    border: 1px solid #eee;
+    box-shadow: none;
+    border-radius: 0;
+    
+    /* ZMIANA: WŁĄCZENIE UKŁADU POZIOMEGO (ZDJĘCIE PO LEWEJ, TEKST PO PRAWEJ) */
+    display: flex;
+    flex-direction: row; /* Zmieniamy na układ poziomy */
+    align-items: flex-start; /* Elementy wyrównane do góry */
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.author-box img {
+    border-radius: 50%; /* Stylujemy obrazek na okrągły */
+    width: 60px; /* Mniejszy rozmiar */
+    height: 60px;
+    
+    /* ZMIANA: DODANIE MARGINESU ZDJĘCIU, ABY ODSUNĄĆ TEKST */
+    margin-right: 15px; 
+    margin-bottom: 0; 
+    
+    flex-shrink: 0; /* Zapobiega zmniejszaniu się zdjęcia */
+}
+    .author-box .info {
+        /* Pozwalamy info wypełnić pozostałą przestrzeń */
+        flex-grow: 1; 
+        min-width: 0; /* WAŻNE: Zapobiega przepełnieniu tekstu */
+        box-sizing: border-box; 
+    }
+    
+    .author-box .info h3 {
+        font-size: 20px;
+    }
+
+    .author-box .info p {
+        font-size: 14px;
+        /* WAŻNE: Łamanie długich słów, aby zapobiec przepełnieniu */
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+    }
+    
+    /* Resetujemy style dla subscribe-btn na 900px, gdy jest pod logiem */
+    .subscribe-btn {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        right: auto;
+        font-size: 16px;
+    }
+}
+
+/* POPRAWKI MOBILE HEADERA */
+/* ************************************************** */
+/* ZMIANY DLA MOBILE (@media (max-width: 600px)) */
+/* ************************************************** */
+/* ************************************************** */
+/* ZMIANY DLA MOBILE (@media (max-width: 600px)) */
+/* ************************************************** */
+@media (max-width: 600px) {
+    
+    /* 1. KOREKTA PRZEPEŁNIENIA LOGO */
+    nav .logo {
+        line-height: 1.1; 
+        max-width: 90%; 
+        word-break: break-word; 
+        white-space: normal;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40px;
+    }
+    
+    /* 2. REPOZYCJONOWANIE IKONY MENU (Hamburger - Absolutnie, Top Lewo) */
+    /* Upewniamy się, że ikona jest wyświetlona! */
+    .menu-icon {
+        display: block; 
+        position: absolute; 
+        left: 12px; 
+        right: auto; 
+        top: 15px; 
+        transform: none;
+        z-index: 100;
+        /* Ważne: usuwamy wszystkie inne nadpisujące style ukrywające ikonę */
+    }
+    
+    /* 3. REPOZYCJONOWANIE PRZYCISKU SUBSCRIBE (Absolutnie, Top Prawo) */
+    .subscribe-btn {
+        position: absolute;
+        top: 15px; 
+        right: 12px; 
+        transform: none;
+        margin: 0;
+        padding: 8px 14px;
+        font-size: 14px;
+        z-index: 100;
+    }
+    
+    /* 4. DOSTOSOWANIE KONTENERA LOGO (Wyśrodkowane poniżej Top Bar) */
+    nav .nav-top {
+        flex-direction: column; 
+        /* Dodajemy duży padding-top, by zrobić miejsce na absolutny Top Bar */
+        padding: 55px 12px 10px 12px; 
+        align-items: center; 
+        min-height: auto;
+    }
+    
+    nav .logo {
+        order: 2; 
+        margin-top: 10px; 
+    }
+    
+    /* 5. UPEWNIAMY SIĘ, ŻE NAV-CONTAINER JEST ZRESETOWANY */
+    .nav-container {
+        padding: 0;
+        border-top: none;
+        position: static; 
+    }
+    
+    /* TEGO USUWAMY, ABY NIE UKRYWAĆ IKONY:
+    * .nav-container .menu-icon { display: none !important; } 
+    */
+    
+    /* Reszta styli dla menu na mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding-top: 8px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 10px 0;
+    }
+    .nav-links li:not(:last-child)::after {
+        display: none;
+    }
+}
+
+/* STICKY MENU */
+.sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 1000;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(-100%); 
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.sticky-menu.sticky-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* --- HERO OPENING FULL WIDTH --- */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 68vh;
+    background-image: url('https://image-cloud-server.netlify.app/image_638951710621557739.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.35) 0%,
+            rgba(0,0,0,0.55) 50%,
+            rgba(0,0,0,0.75) 100%
+        );
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 16px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-kicker {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: #e53935;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 0;
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(34px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 12px 0;
+    color: #fff;
+    letter-spacing: 0.2px;
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(15px, 2.2vw, 20px);
+    font-weight: 500;
+    line-height: 1.7;
+    opacity: 0.95;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.hero-author-meta {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.hero-author-photo {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+.hero-meta-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    line-height: 1.35;
+}
+.hero-author {
+    font-weight: 600;
+}
+.hero-date {
+    opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+    .hero { min-height: 56vh; }
+    .hero-inner { padding: 36px 14px; }
+}
+
+.share-bar {
+    display: none;
+}
+
+/* LAYOUT: content + pionowy separator + sidebar */
+.page-layout {
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 0 12px;
+    overflow: visible;
+}
+
+.v-divider {
+    width: 1px;
+    background: #e6e6e6;
+    align-self: stretch;
+}
+
+/* NOWY KONTENER DLA PRAWYCH ELEMENTÓW */
+.article-meta-area {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: relative;
+}
+
+/* STYLI DLA AUTHOR BOX W SIDEBARZE */
+.author-sidebar-wrapper {
+    width: 260px; /* Szerokość taka sama jak sidebar */
+    position: static;
+    top: 90px;
+    align-self: flex-start;
+    background: white;
+    padding: 0;
+    margin-bottom: 18px; /* Odstęp między Author Box a TOC */
+}
+
+.author-box {
+    width: 100%; /* Wypełnia szerokość wrappera */
+    margin: 0; /* Usuwamy margin */
+    background-color: white;
+    padding: 16px; /* Zmniejszamy padding, aby pasował do TOC */
+    border: 1px solid #eee;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column; /* Układ pionowy dla elementów info */
+    align-items: flex-start; /* Ustawia elementy na początku */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.author-box img {
+    border-radius: 50%; /* Stylujemy obrazek na okrągły */
+    width: 60px; /* Mniejszy rozmiar */
+    height: 60px;
+    margin-right: 0; /* Usuwamy prawy margin */
+    margin-bottom: 10px; /* Dodajemy dolny margin */
+}
+
+.author-box .info {
+    width: 100%;
+}
+
+.author-box .info h3 {
+    margin: 0;
+    font-size: 17px; /* Mniejsza czcionka */
+    color: #000;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.author-box .info p {
+    margin: 3px 0 8px;
+    color: #222;
+    font-size: 13px; /* Mniejsza czcionka dla bio */
+    font-weight: 400;
+}
+
+.author-box .social-media a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 13px; /* Mniejsza czcionka */
+}
+
+.author-box .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* STYLI DLA SPISU TREŚCI (TOC) */
+.article-sidebar {
+    width: 260px;
+    position: sticky; /* KLUCZOWE: USTAWIA ELEMENT JAKO PRZYKLEJONY */
+    top: 90px; /* Określa, gdzie ma się zatrzymać - 90px od góry viewportu */
+    align-self: flex-start;
+    background: white;
+    padding: 16px;
+    border-radius: 0;
+    border: 1px solid #eee;
+    box-shadow: none;
+  
+}
+
+.toc-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #000;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list li {
+    margin: 6px 0;
+}
+
+.toc-list a {
+    display: block;
+    font-size: 15px;
+    line-height: 1.25;
+    color: #222;
+    font-weight: 500;
+    padding: 6px 6px;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+.toc-list a:hover {
+    background: #f4f4f4;
+}
+
+.toc-list a.active {
+    background: #ededed;
+    font-weight: 700;
+}
+
+.reading-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: #222; /* kolor JANE DOE */
+    z-index: 1001;
+    transition: width 0.08s linear;
+    display: none; /* startuje dopiero ze sticky */
+}
+
+
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+    }
+    .v-divider {
+        display: none;
+    }
+
+    .article-meta-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author-sidebar-wrapper {
+        width: 100%;
+        position: static;
+        max-height: none;
+        margin-bottom: 20px;
+        order: -2; /* Umieść Author Box jako pierwszy na małych ekranach */
+    }
+
+    .article-sidebar {
+        width: 100%;
+        position: static; /* RESETUJEMY STICKY DLA MOBILE */
+        max-height: none;
+        order: -1;
+        margin-bottom: 20px;
+        /* Dodajemy box-sizing, aby padding wewnątrz toc nie powodował scrolla */
+        box-sizing: border-box; 
+        padding: 16px 12px;
+    }
+
+    .author-box {
+        flex-direction: row; /* Zmieniamy na układ poziomy na małych ekranach */
+        align-items: center;
+    }
+
+    .author-box img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .author-box .info h3 {
+        font-size: 20px;
+    }
+
+    .author-box .info p {
+        font-size: 14px;
+    }
+}
+
+/* ------------------------------------- */
+/* RELATED ARTICLES SECTION STYLES */
+/* ------------------------------------- */
+.related-articles-section {
+    width: 100%;
+    background-color: #f7f7f7; /* Lekko szare tło dla sekcji */
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.related-articles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px; /* Marginesy boczne jak w page-layout */
+}
+
+.related-articles-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.next {
+    /* Wyrównanie i marginesy */
+    text-align: right; /* Wyrównanie do prawej jest dyskretne */
+    margin: 30px 0 20px 0; 
+    padding-top: 10px; 
+    font-family: 'Montserrat', sans-serif; /* Font Montserrat */
+    /* Subtelne rozdzielenie od reszty tekstu */
+    border-top: 1px solid #e0e0e0; /* Cienka, jasnoszara linia */
+}
+
+.next a {
+    /* Styl tekstu linku */
+    font-family: 'Montserrat', sans-serif; /* Font Montserrat */
+    font-size: 16px;
+    font-weight: 500;
+    color: #888; /* Ciemnoszary, nienachalny kolor */
+    text-decoration: none; /* Usuń domyślne podkreślenie */
+    
+    /* Dodanie subtelnej strzałki w prawo (►) za tekstem */
+    content: " \25BA"; 
+}
+
+.next a:hover {
+    color: #333; /* Delikatnie ciemniejszy kolor przy najechaniu */
+    text-decoration: underline; /* Powrót do podkreślenia przy najechaniu */
+}
+
+.article-card {
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-category {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #e53935;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------------- */
+/* MODAL (POPUP) STYLES */
+/* ------------------------------------- */
+.modal {
+    display: none; /* Ukryty domyślnie */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+    border-radius: 0;
+    text-align: center;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 0;
+    color: #000;
+    line-height: 1.3;
+}
+
+.modal p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.modal-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0;
+}
+
+.modal-form button {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0;
+}
+
+.modal-form button:hover {
+    background-color: #333;
+}
+
+.success-message {
+    color: #17a2b8; /* Turkusowy/niebieski kolor */
+    font-weight: 600;
+    margin-top: 15px;
+    display: none;
+    font-size: 16px;
+}
+
+/* ------------------------------------- */
+
+/* --- STYLI DLA MEGAMENU (ZMODYFIKOWANE DLA POPRAWY POZYCJONOWANIA I ZMIENNEJ LICZBY KOLUMN) --- */
+
+/* Kontener dla rozwijanej sekcji */
+.nav-links li.has-submenu {
+    position: relative;
+}
+
+.nav-links li.has-submenu:hover > .megamenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.megamenu {
+    position: absolute;
+    top: 100%;
+
+    /* Domyślne: lewa krawędź megamenu przy lewej krawędzi LI (dla menu po lewej) */
+    left: 0;
+    transform: translateY(10px);
+
+    z-index: 100;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+    box-sizing: border-box;
+    pointer-events: none;
+
+    /* Maksymalna szerokość, aby nie wychodziło poza ekran na bardzo wąskich monitorach */
+    max-width: calc(100vw - 32px);
+}
+
+/* Wyrównanie do prawej - użyte dla końcowych elementów */
+.nav-links li.has-submenu.align-right .megamenu {
+    left: auto;
+    right: 0; /* Menu zaczepia się do prawej krawędzi LI */
+    transform: translateY(10px);
+}
+
+/* Wyrównanie do środka - użyte dla środkowych elementów menu */
+.nav-links li.has-submenu.align-center .megamenu {
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+}
+
+/* ZMIENNA SZEROKOŚĆ ZALEŻNA OD LICZBY KOLUMN (200px szerokość karty, 20px gap, 20px padding) */
+/* 40px padding w sumie (20px lewo + 20px prawo) */
+/* WZÓR: N * 200px + (N-1) * 20px + 40px padding */
+.megamenu.cols-4 {
+    width: 900px; /* 4 * 200 + 3 * 20 + 40 = 900px */
+}
+.megamenu.cols-3 {
+    width: 680px; /* 3 * 200 + 2 * 20 + 40 = 680px */
+}
+.megamenu.cols-2 {
+    width: 460px; /* 2 * 200 + 1 * 20 + 40 = 460px */
+}
+
+.megamenu .articles-grid {
+    grid-template-columns: repeat(4, 1fr); /* Domyślnie 4 */
+    gap: 20px;
+    margin: 0;
+}
+
+.megamenu.cols-3 .articles-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.megamenu.cols-2 .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Reszta styli dla kart w megamenu */
+.megamenu .article-card {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.megamenu .article-card:hover {
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.megamenu .article-card img {
+    height: 140px;
+}
+
+.megamenu .card-content {
+    padding: 10px 0 0 0;
+}
+
+.megamenu .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Ikonka strzałki w dół */
+.nav-links li a .fa-chevron-down {
+    font-size: 10px;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+    transform: translateY(1px);
+}
+
+.nav-links li.has-submenu:hover > a .fa-chevron-down {
+    transform: translateY(1px) rotate(180deg);
+}
+
+/* Ukrywanie megamenu na małych ekranach */
+@media (max-width: 900px) {
+    .nav-links li.has-submenu .megamenu {
+        display: none;
+    }
+}
+/* --- KONIEC STYLI MEGAMENU --- */
+
+footer {
+    background: #000;
+    color: #fff;
+    padding: 48px 0;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 40px;
+}
+
+footer h3 {
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 14px 0;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer .footer-brand {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+footer p, footer a, footer li {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #cfcfcf;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+}
+
+footer .footer-thumb {
+    width: 70px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 0;
+    flex: none;
+    background: #111;
+}
+
+footer .footer-item-title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+footer .footer-item-date {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+footer .comment-author {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6fd0d6;
+    margin-right: 6px;
+}
+
+/* Nowy styl dla przycisku kontaktowego w stopce */
+.contact-btn-footer {
+    background-color: #fff; /* Białe tło */
+    color: #000; /* Czarny tekst */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Usuń podkreślenie linku */
+    display: inline-block; /* Aby przycisk był inline-block */
+    margin-top: 10px; /* Odstęp od tekstu 'We're accepting...' */
+}
+
+.contact-btn-footer:hover {
+    background-color: #f0f0f0; /* Lekko szare tło na hover */
+    color: #000;
+}
+
+
+@media (max-width: 900px) {
+    footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ------------------------------------- */
+/* NOWE STYLE DLA KATEGORII W FOOTERZE */
+/* ------------------------------------- */
+footer .footer-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Odstęp między tagami */
+}
+
+footer .footer-tags-list li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-tags-list a {
+    display: inline-block;
+    background: #222; /* Tło dla tagu */
+    color: #cfcfcf; /* Tekst */
+    font-size: 13px; /* Mniejszy rozmiar */
+    font-weight: 500;
+    padding: 8px 12px;
+    border: 1px solid #444; /* Ramka */
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 1; /* Poprawia wyrównanie */
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+footer .footer-tags-list a:hover {
+    background: #e53935; /* Kolor jak hero-kicker */
+    color: #fff;
+    border-color: #e53935;
+    text-decoration: none;
+}
+
+/* ------------------------------------- */
+/* NOWE STYLE DLA DOLNEJ CZĘŚCI STOPKI (CREDIT BAR) */
+/* ------------------------------------- */
+footer .footer-bottom-bar {
+    border-top: 1px solid #222;
+    padding: 20px 0; /* Zmieniony padding */
+}
+
+footer .footer-bottom-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+}
+
+footer .footer-bottom-links a {
+    color: #cfcfcf;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer .footer-bottom-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    footer .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    footer .footer-bottom-links a {
+        margin: 0 10px;
+    }
+}
+/* ------------------------------------- */
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="nav-top">
+            <div class="logo"><a href="index.html">CFLR News</a></div>
+            <button class="subscribe-btn" id="open-modal-btn">Subscribe</button>
+        </div>
+    
+        <div class="nav-container">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+    
+                <li class="has-submenu" data-category="home-garden">
+                    <a href="home-garden.html">Home &amp; Garden <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="home-garden.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11.jpg" alt="Essential Tips for a Lush Spring Lawn">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Essential Tips for a Lush Spring Lawn</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/22.jpeg" alt="DIY Smart Home: 5 Budget-Friendly Automation Ideas">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">DIY Smart Home: 5 Budget-Friendly Automation Ideas</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/33.jpg.webp" alt="Minimalist Decor Trends for Your Living Room">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Minimalist Decor Trends for Your Living Room</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/44.jpg" alt="The Best Indoor Plants for Low Light Conditions">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">The Best Indoor Plants for Low Light Conditions</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="business">
+                    <a href="business.html">Business <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="business.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/55.webp" alt="Future of Remote Work: Key Challenges and Opportunities">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Future of Remote Work: Key Challenges and Opportunities</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/66.jpeg" alt="Understanding Global Supply Chain Disruptions">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Understanding Global Supply Chain Disruptions</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/77.jpeg" alt="Start-Up Funding: What Investors are Looking for in 2024">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Start-Up Funding: What Investors are Looking for in 2024</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="technology">
+                    <a href="technology.html">Technology <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="technology.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/88.png" alt="The Rise of Generative AI in Creative Industries">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">The Rise of Generative AI in Creative Industries</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/99.jpg" alt="Understanding Next-Gen Cybersecurity Threats">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Understanding Next-Gen Cybersecurity Threats</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/111.jpeg" alt="Space Tourism: Is It the Next Big Thing for Tech?">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Space Tourism: Is It the Next Big Thing for Tech?</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/222.webp" alt="Review: The Latest Foldable Smartphones on the Market">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Review: The Latest Foldable Smartphones on the Market</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="travel">
+                    <a href="travel.html">Travel <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="travel.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/333.webp" alt="Hidden Gems of the Mediterranean Coast">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Hidden Gems of the Mediterranean Coast</h4>
+                                </div>
+                            </a>
+                            <a href="travel.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/444.jpeg" alt="Budget Travel: Exploring Europe by Train">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Budget Travel: Exploring Europe by Train</h4>
+                                </div>
+                            </a>
+                            <a href="travel.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/555.jpg" alt="Top 5 Adventure Destinations for Solo Backpackers">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Top 5 Adventure Destinations for Solo Backpackers</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="health">
+                    <a href="health.html">Health <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="health.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/666.jpg" alt="The Science Behind Intermittent Fasting">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">The Science Behind Intermittent Fasting</h4>
+                                </div>
+                            </a>
+                            <a href="health.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/777.png" alt="Practicing Mindfulness for Better Mental Well-being">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Practicing Mindfulness for Better Mental Well-being</h4>
+                                </div>
+                            </a>
+                            <a href="health.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/888.webp" alt="Boosting Immunity: Foods to Eat This Winter">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Boosting Immunity: Foods to Eat This Winter</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="fashion">
+                    <a href="fashion.html">Fashion <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="fashion.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/999.webp" alt="The Hottest Trends from the Fall/Winter Runways">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">The Hottest Trends from the Fall/Winter Runways</h4>
+                                </div>
+                            </a>
+                            <a href="fashion.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/1111.webp" alt="Sustainable Style: Building an Ethical Wardrobe">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">Sustainable Style: Building an Ethical Wardrobe</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="entertainment">
+                    <a href="entertainment.html">Entertainment <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="entertainment.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/2222.jpg" alt="Review: The Most Anticipated Movies of the Year">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Review: The Most Anticipated Movies of the Year</h4>
+                                </div>
+                            </a>
+                            <a href="entertainment.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/3333.jpg" alt="The Comeback of Vinyl: Why Records are Popular Again">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">The Comeback of Vinyl: Why Records are Popular Again</h4>
+                                </div>
+                            </a>
+                            <a href="entertainment.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/4444.jpg" alt="Top 10 Video Games Dominating the Streaming World">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Top 10 Video Games Dominating the Streaming World</h4>
+                                </div>
+                            </a>
+                            <a href="entertainment.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/5555.webp" alt="Behind the Scenes: A Look at the Latest Blockbuster TV Series">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Behind the Scenes: A Look at the Latest Blockbuster TV Series</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="lifestyle">
+                    <a href="lifestyle.html">Lifestyle <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="lifestyle.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/6666.jpg" alt="Mastering the Art of Work-Life Balance in a Digital Age">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Mastering the Art of Work-Life Balance in a Digital Age</h4>
+                                </div>
+                            </a>
+                            <a href="lifestyle.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/7777.jpg" alt="The Power of Digital Detox: Reclaiming Your Free Time">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">The Power of Digital Detox: Reclaiming Your Free Time</h4>
+                                </div>
+                            </a>
+                            <a href="lifestyle.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/8888.jpeg" alt="Simple Meditation Techniques for Beginners">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Simple Meditation Techniques for Beginners</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="news">
+                    <a href="news.html">News <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="news.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/9999.jpg" alt="Global Leaders Discuss Climate Change Policy at Summit">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Global Leaders Discuss Climate Change Policy at Summit</h4>
+                                </div>
+                            </a>
+                            <a href="news.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11111.png" alt="Local Community Rallies to Save Historic Landmark">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Local Community Rallies to Save Historic Landmark</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="sticky-menu" id="sticky-menu">
+        <div class="nav-container">
+            <div class="menu-icon" id="sticky-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="sticky-nav-list"> 
+    
+                <li class="has-submenu" data-category="home-garden">
+                    <a href="home-garden.html">Home &amp; Garden <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="home-garden.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11.jpg" alt="Essential Tips for a Lush Spring Lawn">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Essential Tips for a Lush Spring Lawn</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/22.jpeg" alt="DIY Smart Home: 5 Budget-Friendly Automation Ideas">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">DIY Smart Home: 5 Budget-Friendly Automation Ideas</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/33.jpg.webp" alt="Minimalist Decor Trends for Your Living Room">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">Minimalist Decor Trends for Your Living Room</h4>
+                                </div>
+                            </a>
+                            <a href="home-garden.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/44.jpg" alt="The Best Indoor Plants for Low Light Conditions">
+                                <div class="card-content">
+                                    <span class="card-category">Home & Garden</span>
+                                    <h4 class="card-title">The Best Indoor Plants for Low Light Conditions</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="business">
+                    <a href="business.html">Business <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="business.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/55.webp" alt="Future of Remote Work: Key Challenges and Opportunities">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Future of Remote Work: Key Challenges and Opportunities</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/66.jpeg" alt="Understanding Global Supply Chain Disruptions">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Understanding Global Supply Chain Disruptions</h4>
+                                </div>
+                            </a>
+                            <a href="business.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/77.jpeg" alt="Start-Up Funding: What Investors are Looking for in 2024">
+                                <div class="card-content">
+                                    <span class="card-category">Business</span>
+                                    <h4 class="card-title">Start-Up Funding: What Investors are Looking for in 2024</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="technology">
+                    <a href="technology.html">Technology <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+                            <a href="technology.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/88.png" alt="The Rise of Generative AI in Creative Industries">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">The Rise of Generative AI in Creative Industries</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/99.jpg" alt="Understanding Next-Gen Cybersecurity Threats">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Understanding Next-Gen Cybersecurity Threats</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/111.jpeg" alt="Space Tourism: Is It the Next Big Thing for Tech?">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Space Tourism: Is It the Next Big Thing for Tech?</h4>
+                                </div>
+                            </a>
+                            <a href="technology.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/222.webp" alt="Review: The Latest Foldable Smartphones on the Market">
+                                <div class="card-content">
+                                    <span class="card-category">Technology</span>
+                                    <h4 class="card-title">Review: The Latest Foldable Smartphones on the Market</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="travel">
+                    <a href="travel.html">Travel <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="travel.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/333.webp" alt="Hidden Gems of the Mediterranean Coast">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Hidden Gems of the Mediterranean Coast</h4>
+                                </div>
+                            </a>
+    
+                            <a href="travel.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/444.jpeg" alt="Budget Travel: Exploring Europe by Train">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Budget Travel: Exploring Europe by Train</h4>
+                                </div>
+                            </a>
+    
+                            <a href="travel.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/555.jpg" alt="Top 5 Adventure Destinations for Solo Backpackers">
+                                <div class="card-content">
+                                    <span class="card-category">Travel</span>
+                                    <h4 class="card-title">Top 5 Adventure Destinations for Solo Backpackers</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-center" data-category="health">
+                    <a href="health.html">Health <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="health.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/666.jpg" alt="The Science Behind Intermittent Fasting">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">The Science Behind Intermittent Fasting</h4>
+                                </div>
+                            </a>
+    
+                            <a href="health.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/777.png" alt="Practicing Mindfulness for Better Mental Well-being">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Practicing Mindfulness for Better Mental Well-being</h4>
+                                </div>
+                            </a>
+    
+                            <a href="health.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/888.webp" alt="Boosting Immunity: Foods to Eat This Winter">
+                                <div class="card-content">
+                                    <span class="card-category">Health</span>
+                                    <h4 class="card-title">Boosting Immunity: Foods to Eat This Winter</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="fashion">
+                    <a href="fashion.html">Fashion <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="fashion.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/999.webp" alt="The Hottest Trends from the Fall/Winter Runways">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">The Hottest Trends from the Fall/Winter Runways</h4>
+                                </div>
+                            </a>
+    
+                            <a href="fashion.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/1111.webp" alt="Sustainable Style: Building an Ethical Wardrobe">
+                                <div class="card-content">
+                                    <span class="card-category">Fashion</span>
+                                    <h4 class="card-title">Sustainable Style: Building an Ethical Wardrobe</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="entertainment">
+                    <a href="entertainment.html">Entertainment <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-4">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="entertainment.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/2222.jpg" alt="Review: The Most Anticipated Movies of the Year">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Review: The Most Anticipated Movies of the Year</h4>
+                                </div>
+                            </a>
+    
+                            <a href="entertainment.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/3333.jpg" alt="The Comeback of Vinyl: Why Records are Popular Again">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">The Comeback of Vinyl: Why Records are Popular Again</h4>
+                                </div>
+                            </a>
+    
+                            <a href="entertainment.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/4444.jpg" alt="Top 10 Video Games Dominating the Streaming World">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Top 10 Video Games Dominating the Streaming World</h4>
+                                </div>
+                            </a>
+    
+                            <a href="entertainment.html#article4" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/5555.webp" alt="Behind the Scenes: A Look at the Latest Blockbuster TV Series">
+                                <div class="card-content">
+                                    <span class="card-category">Entertainment</span>
+                                    <h4 class="card-title">Behind the Scenes: A Look at the Latest Blockbuster TV Series</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="lifestyle">
+                    <a href="lifestyle.html">Lifestyle <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-3">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="lifestyle.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/6666.jpg" alt="Mastering the Art of Work-Life Balance in a Digital Age">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Mastering the Art of Work-Life Balance in a Digital Age</h4>
+                                </div>
+                            </a>
+    
+                            <a href="lifestyle.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/7777.jpg" alt="The Power of Digital Detox: Reclaiming Your Free Time">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">The Power of Digital Detox: Reclaiming Your Free Time</h4>
+                                </div>
+                            </a>
+    
+                            <a href="lifestyle.html#article3" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/8888.jpeg" alt="Simple Meditation Techniques for Beginners">
+                                <div class="card-content">
+                                    <span class="card-category">Lifestyle</span>
+                                    <h4 class="card-title">Simple Meditation Techniques for Beginners</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="has-submenu align-right" data-category="news">
+                    <a href="news.html">News <i class="fas fa-chevron-down"></i></a>
+                    <div class="megamenu cols-2">
+                        <div class="megamenu-inner articles-grid">
+    
+                            <a href="news.html#article1" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/9999.jpg" alt="Global Leaders Discuss Climate Change Policy at Summit">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Global Leaders Discuss Climate Change Policy at Summit</h4>
+                                </div>
+                            </a>
+    
+                            <a href="news.html#article2" class="article-card">
+                                <img src="https://image-cloud-server.netlify.app/11111.png" alt="Local Community Rallies to Save Historic Landmark">
+                                <div class="card-content">
+                                    <span class="card-category">News</span>
+                                    <h4 class="card-title">Local Community Rallies to Save Historic Landmark</h4>
+                                </div>
+                            </a>
+    
+                        </div>
+                    </div>
+                </li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="hero" aria-label="Article opening image">
+        <div class="hero-inner">
+
+            
+    
+      <div class="hero-kicker">business</div>
+    
+      <div class="hero-kicker">technology</div>
+    
+  
+
+            <h1 class="hero-title">Guide to Choosing the Right Supplement Manufacturing Format for Your Brand</h1>
+
+            <div class="hero-author-meta">
+                <img
+                    class="hero-author-photo"
+                    src="https://image-cloud-server.netlify.app/copywriter3.webp"
+                    alt="Photo of Ethan Reynolds"
+                    loading="lazy"
+                    style="border-radius:50%; object-fit:cover;"
+                >
+                <div class="hero-meta-text">
+                    <span class="hero-author">By Ethan Reynolds</span>
+                    <span class="hero-date">08 December 2025 · 5 min read</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="page-layout">
+
+        <div class="container">
+            <div class="content" id="article-content">
+                <h2>What Are the Different Supplement Manufacturing Formats Available?</h2>
+
+<p>Supplement manufacturing includes various formats, each with unique characteristics and applications. <strong>Capsules</strong> are a popular choice due to their convenience and ease of swallowing. Typically made from gelatin or plant-based materials, capsules can encapsulate powders, granules, or even liquids. They offer a precise dosage and are ideal for formulations requiring protection from air or light.</p>
+
+<p><strong>Tablets</strong> are another common format, created by compressing powdered ingredients into a solid form. Tablets can be coated for taste masking or extended release. They are suitable for high-volume production and provide a stable shelf life. Their hardness can be adjusted, allowing for customized dissolution rates, which are essential for specific therapeutic effects.</p>
+
+<p><strong>Powders</strong> provide flexibility in dosage and can be mixed with liquids or other ingredients. They are often used in protein supplements and meal replacements. Powders allow for quick absorption and are suitable for individuals who prefer personalized dosing. Mixing powders with beverages can enhance palatability and ease of consumption.</p>
+
+<p><strong>Liquids</strong>, including tinctures and syrups, offer rapid absorption and are often favored for their ease of ingestion. They are particularly beneficial for individuals who have difficulty swallowing pills. Liquid formats can also facilitate the incorporation of herbs and nutrients that may not be easily extracted in solid forms.</p>
+
+<p>Each format serves distinct purposes, catering to various consumer preferences and health needs. The choice of format can significantly influence the efficacy and user experience of the supplement.</p>
+
+<h2>How to Determine the Best Supplement Format for Your Target Audience?</h2>
+
+<ul>
+<li><p><strong>Assess Customer Preferences</strong>: Conduct surveys or focus groups to gather insights into preferred supplement formats, such as capsules, powders, or gummies.</p></li>
+<li><p><strong>Analyze Demographics</strong>: Identify key demographic factors, including age, gender, and lifestyle, which influence format selection. For instance, younger consumers may prefer trendy formats like gummies.</p></li>
+<li><p><strong>Evaluate Consumption Habits</strong>: Investigate how often and in what settings customers intend to consume supplements. Busy individuals may favor convenient formats that are easy to take on the go.</p></li>
+<li><p><strong>Consider Health Trends</strong>: Stay informed about current health and wellness trends. Formats that align with popular diets or health movements can attract more customers.</p></li>
+<li><p><strong>Review Competitor Offerings</strong>: Analyze the formats used by competitors in the market. Understanding what is available helps in identifying gaps and opportunities for differentiation.</p></li>
+</ul>
+
+<h2>What Are the Cost Implications of Each Manufacturing Format?</h2>
+
+<p>Understanding the cost implications of different supplement manufacturing formats is crucial for businesses aiming to optimize their budget. <strong>Production costs</strong> vary significantly among formats such as capsules, powders, and liquids. For instance, producing capsules typically incurs higher initial costs due to the machinery required for encapsulation. Conversely, powder formats often have lower production costs since they require simpler processing techniques.</p>
+
+<p><strong>Packaging costs</strong> also differ based on the format. Capsules require individual blister packs or bottles, increasing the overall expense. In contrast, powders may be packaged in bulk, which can reduce per-unit costs. Additionally, liquid supplements often demand specialized bottles and protective seals, contributing to higher packaging expenses.</p>
+
+<p><strong>Shipping costs</strong> are another factor influenced by the format. Capsules and powders tend to be lightweight and compact, leading to lower shipping fees. Liquid formats, however, can be heavier and bulkier, which may result in increased shipping costs. </p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturing Format</th>
+      <th>Production Costs</th>
+      <th>Packaging Costs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Capsules</td>
+      <td>Higher due to encapsulation machinery</td>
+      <td>Individual blister packs or bottles</td>
+    </tr>
+    <tr>
+      <td>Powders</td>
+      <td>Lower due to simpler processing</td>
+      <td>Bulk packaging options</td>
+    </tr>
+    <tr>
+      <td>Liquids</td>
+      <td>Moderate, depends on formulation</td>
+      <td>Specialized bottles and seals</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>How Do Regulatory Requirements Impact Your Format Choice?</h2>
+
+<p>Regulatory requirements significantly influence the selection of supplement manufacturing formats. <strong>Different formats, such as capsules, powders, and liquids, are subject to varying regulations</strong> based on their composition and intended use. For instance, liquid supplements may require stringent testing for microbial contamination due to their water content, whereas solid forms like tablets must adhere to specific disintegration standards.</p>
+
+<p><strong>Compliance measures are essential throughout the manufacturing process.</strong> Manufacturers must ensure that all ingredients meet safety standards established by organizations such as the Food and Drug Administration (FDA) in the United States or the European Food Safety Authority (EFSA) in Europe. This includes obtaining necessary certifications and conducting routine inspections. Additionally, labels must accurately reflect the contents and adhere to specific guidelines, which can differ based on the format. For example, dietary supplements in powder form often face stricter labeling regulations regarding serving sizes and ingredient disclosures.</p>
+
+<h2>What Are the Pros and Cons of Popular Supplement Formats?</h2>
+
+<h3>1. Capsules</h3>
+
+<p>Capsules offer several <strong>benefits</strong>, including <strong>ease of swallowing</strong> and effective <strong>taste masking</strong>. These attributes make them appealing to consumers who may have difficulty with other formats. However, <strong>downsides</strong> include potentially <strong>higher production costs</strong>, which can affect overall pricing strategies.</p>
+
+<h3>2. Tablets</h3>
+
+<p>Tablets are recognized for their <strong>cost-effectiveness</strong> and <strong>ease of storage</strong>, making them a popular choice for both manufacturers and consumers. They are generally durable and have a long shelf life. On the downside, tablets may experience <strong>issues with disintegration</strong>, impacting their <strong>absorption rates</strong> in the body, which can affect efficacy.</p>
+
+<h3>3. Powders</h3>
+
+<p>Powders are highly <strong>versatile</strong> and allow for <strong>customization</strong> in formulation, catering to specific consumer needs. They can be easily mixed with liquids or foods, enhancing their utility. However, powders can be <strong>less convenient</strong> for on-the-go consumption, requiring additional preparation time and equipment.</p>
+
+<h3>4. Liquids</h3>
+
+<p>Liquids provide <strong>fast absorption</strong> and are often perceived as easy to consume, especially for individuals who struggle with solid forms. Their form can enhance bioavailability, making nutrients more readily accessible. Nonetheless, liquids may require <strong>more complex packaging</strong> and preservation methods to ensure product stability and shelf life.</p>
+
+<h2>How to Choose Between In-House Manufacturing and Outsourcing?</h2>
+
+<h3>1. Evaluate Production Capacity</h3>
+
+<p>Assess your current production capacity. Determine if your facility can meet demand levels without compromising quality. Consider factors like equipment availability, workforce skills, and space. If your capacity is limited, outsourcing may provide a scalable solution.</p>
+
+<h3>2. Analyze Cost Considerations</h3>
+
+<p>Examine the costs associated with both manufacturing options. In-house production involves fixed costs like labor and facility maintenance. Outsourcing typically includes variable costs per unit. Calculate the total cost of ownership for both approaches to identify the most economical choice.</p>
+
+<h3>3. Consider Quality Control</h3>
+
+<p>Quality control standards are critical in supplement manufacturing. In-house production allows for direct oversight of quality processes. Conversely, partnering with a contract manufacturer may require stringent quality agreements. Evaluate which method aligns better with your quality assurance goals.</p>
+
+<h3>4. Assess Time-to-Market</h3>
+
+<p>Time constraints can greatly affect your decision. In-house manufacturing may offer quicker turnaround times for product launches if all resources are available. Outsourcing can also expedite processes, especially if the contract manufacturer has established capabilities. Analyze which option can deliver products faster.</p>
+
+<h3>5. Review Regulatory Compliance</h3>
+
+<p>Regulatory compliance is essential for supplement manufacturing. In-house facilities must adhere to Good Manufacturing Practices (GMP) and other regulations. Contract manufacturers typically have established compliance protocols. Assess your team’s knowledge and ability to meet these requirements effectively. </p>
+
+<h3>6. Identify Strategic Focus</h3>
+
+<p>Consider your company's strategic goals. If your focus is on innovation and product development, outsourcing may free up resources for these priorities. If maintaining control over production aligns with your long-term strategy, in-house manufacturing might be more suitable. </p>
+
+<h3>7. Evaluate Flexibility and Scalability</h3>
+
+<p>Flexibility and scalability are crucial in a fluctuating market. In-house manufacturing can limit your ability to quickly adjust production levels based on demand. Contract manufacturers often provide the flexibility to scale operations up or down as needed, which can be beneficial in volatile markets. </p>
+
+<h3>8. Understand Supply Chain Dynamics</h3>
+
+<p>Analyze your supply chain dynamics. In-house manufacturing may simplify logistics and inventory management. However, a contract manufacturer can offer access to established supply chains and networks, potentially reducing lead times and costs. Consider which approach supports your supply chain strategy better. </p>
+
+<h3>9. Assess Risk Management</h3>
+
+<p>Risk management is vital in supplement manufacturing. In-house production can expose you to risks related to equipment failure or workforce issues. Outsourcing can mitigate some of these risks by sharing responsibilities with another entity. Evaluate your risk tolerance and the potential impact on your business. </p>
+
+<h3>10. Seek Expert Advice</h3>
+
+<p>Consult industry experts or advisors when making your decision. Their insights can provide valuable perspectives on both manufacturing options. Engaging with professionals who understand market trends can help you make a well-informed choice that aligns with your business objectives.</p>
+
+<h2>What Role Does Branding Play in Format Selection?</h2>
+
+<p>Branding significantly influences supplement format and packaging decisions. A strong brand identity can dictate the type of packaging that resonates with consumers. For instance, eco-friendly brands often opt for sustainable packaging materials to reflect their commitment to the environment. This choice not only aligns with brand values but also attracts environmentally conscious consumers. </p>
+
+<p>Moreover, the visual presentation of supplements, including color schemes and design elements, plays a crucial role in consumer perception. Brands that emphasize premium quality may choose sleek, minimalist packaging, while those targeting a younger demographic may favor vibrant, playful designs. The format selected, whether capsules, powders, or gummies, must also align with the brand's narrative and appeal to the intended audience.</p>
+
+<blockquote>
+<p>Effective branding shapes consumer expectations and influences their purchasing decisions, making it essential to align supplement format with brand values and market positioning.</p>
+<cite>Elara Finch</cite>
+</blockquote>
+
+<h2>How to Test Market Demand for Your Chosen Format?</h2>
+
+<ul>
+<li><p><strong>Surveys and Questionnaires</strong>: Distribute online surveys to gather consumer preferences. Include specific questions about the supplement format, benefits, and packaging preferences to gain actionable insights.</p></li>
+<li><p><strong>Focus Groups</strong>: Organize focus group sessions with potential customers. Use these discussions to explore attitudes towards different formats, allowing for in-depth understanding of consumer perceptions and motivations.</p></li>
+<li><p><strong>Social Media Polls</strong>: Utilize platforms like Instagram or Facebook to conduct quick polls. This method provides immediate feedback from your audience regarding their interest in your supplement format.</p></li>
+<li><p><strong>Market Analysis</strong>: Research existing market trends and competitor offerings. Analyze sales data and consumer reviews to identify successful formats and gaps in the market.</p></li>
+<li><p><strong>Prototyping and Sampling</strong>: Create prototypes of your supplement in the chosen format and distribute samples. Monitor consumer reactions and preferences through feedback forms or follow-up interviews.</p></li>
+<li><p><strong>A/B Testing</strong>: Implement A/B testing on your website or social media ads to evaluate different formats. Measure engagement rates and conversion metrics to determine which format resonates best with your target audience.</p></li>
+</ul>
+
+<h2>What Trends Are Shaping the Future of Supplement Manufacturing Formats?</h2>
+
+<p><strong>Sustainability</strong> has become a driving force in supplement manufacturing, as consumers increasingly prioritize eco-friendly practices. Manufacturers are adopting biodegradable packaging and sourcing raw materials from sustainable suppliers. For instance, companies like NutraScience Labs utilize plant-based materials for their bottles, significantly reducing plastic waste. This shift not only appeals to environmentally conscious consumers but also aligns with global initiatives aimed at reducing carbon footprints.</p>
+
+<p><strong>Personalization</strong> is another key trend influencing supplement formats. Advances in technology allow for customized formulations based on individual health needs. Brands such as Care/of offer personalized vitamin packs tailored to specific health goals, enhancing user engagement and satisfaction. This approach not only meets consumer demand for unique products but also fosters brand loyalty by making customers feel valued.</p>
+
+<p><strong>Technological advancements</strong> in manufacturing are reshaping how supplements are produced. Automation and AI-driven systems streamline production processes, increasing efficiency and reducing errors. For example, companies implementing robotics in their operations report up to a 30% increase in output. Additionally, 3D printing technology is emerging, allowing for rapid prototyping and the creation of innovative supplement formats. This capability enables manufacturers to quickly respond to market trends and consumer preferences. </p>
+
+<p>These trends collectively indicate a future where supplement manufacturing is more sustainable, personalized, and technologically advanced, driving innovation and enhancing consumer experiences.</p>
+
+            
+        
+
+                <br><br> <p>
+                    
+                    Are you looking for professional services? Find more details here:
+                    
+
+                    
+                        <a href="https://dat.supply">gummy supplement manufacturer Europe</a><br>
+                    
+                    <br><br>
+                </p>
+
+                
+
+                
+
+                
+
+                <br> <p>
+                    <div class="next">
+                        Related article: <a href="https://render-business.onrender.com/nutraceutical-manufacturing-guide.html">Read more</a>
+                    </div>
+                </p>
+            </div>
+        </div>
+
+        <div class="v-divider" aria-hidden="true"></div>
+
+        <div class="article-meta-area">
+            
+            <div class="author-sidebar-wrapper">
+                <div class="author-box">
+                    <img
+                        src="https://image-cloud-server.netlify.app/copywriter3.webp"
+                        alt="Photo of Ethan Reynolds"
+                        loading="lazy"
+                    >
+                    <div class="info">
+                        <h3>Ethan Reynolds</h3>
+                        <p>Senior Copywriter</p>
+                        <p>Ethan Reynolds is a seasoned copywriter specializing in the nutraceutical industry, with a keen focus on guiding brands through the complexities of launching and scaling their products. With extensive expertise in white label manufacturing, custom formulation, and global compliance regulations, Ethan crafts compelling content that demystifies the intricacies of the supplement market. His comprehensive guides, such as those on developing gummy supplements and navigating GMP and HACCP standards, serve as invaluable resources for both new and established brands. Ethan's work empowers entrepreneurs to make informed decisions, ensuring their products not only meet industry standards but also thrive in a competitive global marketplace.</p>
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                            <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                            <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <aside class="article-sidebar" id="toc-sidebar"></aside>
+
+        </div>
+        </div>
+        <section class="related-articles-section">
+            <div class="related-articles-container">
+                <div class="related-articles-title">Trending topics</div>
+                
+                <div class="articles-grid">
+                    
+                    <a href="#" class="article-card">
+                        <img src="https://image-cloud-server.netlify.app/11111.png" alt="Local Community Rallies to Save Historic Landmark">
+                        <div class="card-content">
+                            <span class="card-category">News</span>
+                            <h4 class="card-title">Local Community Rallies to Save Historic Landmark</h4>
+                        </div>
+                    </a>
+        
+                    <a href="#" class="article-card">
+                        <img src="https://image-cloud-server.netlify.app/222.webp" alt="Review: The Latest Foldable Smartphones on the Market">
+                        <div class="card-content">
+                            <span class="card-category">Technology</span>
+                            <h4 class="card-title">Review: The Latest Foldable Smartphones on the Market</h4>
+                        </div>
+                    </a>
+        
+                    <a href="#" class="article-card">
+                        <img src="https://image-cloud-server.netlify.app/6666.jpg" alt="Mastering the Art of Work-Life Balance in a Digital Age">
+                        <div class="card-content">
+                            <span class="card-category">Lifestyle</span>
+                            <h4 class="card-title">Mastering the Art of Work-Life Balance in a Digital Age</h4>
+                        </div>
+                    </a>
+        
+                </div>
+            </div>
+        </section>
+    
+
+    <div id="newsletter-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Add your email to our magazine newsletter</h2>
+            <p>
+                Get the latest articles, exclusive interviews, and trends delivered straight to your inbox.
+                Subscribe now to stay updated with the CFLR News magazine.
+            </p>
+            <form id="subscribe-form" class="modal-form">
+                <input type="email" id="email-input" placeholder="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div id="success-message" class="success-message">
+                Thank you for subscribing! Please check your email inbox to confirm your address.
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+
+            <div>
+                <h3>About us</h3>
+                <div class="footer-brand">Newsboard</div>
+                <p>Your source for the lifestyle news. This demo is crafted specifically to exhibit the use of the theme as a lifestyle site. Visit our main page for more demos.</p>
+                <p>We're accepting new partnerships right now.</p>
+                <a href="contact.html" class="contact-btn-footer">Contact Us</a>
+            </div>
+
+            <div>
+                <h3>Our picks</h3>
+            
+                <div class="footer-item">
+                    <img class="footer-thumb" src="https://image-cloud-server.netlify.app/9999.jpg" alt="Global Leaders Discuss Climate Change Policy at Summit">
+                    <div>
+                        <div class="footer-item-title">Global Leaders Discuss Climate Change Policy at Summit</div>
+                    </div>
+                </div>
+            
+                <div class="footer-item">
+                    <img class="footer-thumb" src="https://image-cloud-server.netlify.app/333.webp" alt="Hidden Gems of the Mediterranean Coast">
+                    <div>
+                        <div class="footer-item-title">Hidden Gems of the Mediterranean Coast</div>
+                    </div>
+                </div>
+            
+                <div class="footer-item">
+                    <img class="footer-thumb" src="https://image-cloud-server.netlify.app/99.jpg" alt="Understanding Next-Gen Cybersecurity Threats">
+                    <div>
+                        <div class="footer-item-title">Understanding Next-Gen Cybersecurity Threats</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Categories</h3>
+                <ul class="footer-tags-list">
+                    <li><a href="home-garden.html">Home &amp; Garden</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="health.html">Health</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="lifestyle.html">Lifestyle</a></li>
+                    <li><a href="news.html">News</a></li>
+                
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-inner">
+                <div>
+                    2025 © All Rights Reserved
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="index.html">Home</a>
+                    <a href="#">About us</a>
+                    <a href="#">Our Team</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funkcja do przełączania mobile menu dla głównej nav
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Funkcja do przełączania mobile menu dla sticky nav
+        document.getElementById('sticky-menu-icon').addEventListener('click', function () {
+            var navLinks = document.getElementById('sticky-nav-list');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Logika dla sticky menu
+        document.addEventListener("DOMContentLoaded", function () {
+            const stickyMenu = document.getElementById("sticky-menu");
+            const scrollThreshold = 250; 
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > scrollThreshold) {
+                    stickyMenu.classList.add("sticky-active");
+                } else {
+                    stickyMenu.classList.remove("sticky-active");
+                }
+            });
+        });
+    </script>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('div.next a');
+            links.forEach(link => {
+                let href = link.getAttribute('href');
+                if (href && !href.endsWith('.html') && !href.match(/\.\w+$/)) {
+                    href += '.html';
+                    link.setAttribute('href', href);
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = document.getElementById("newsletter-modal");
+            const openBtn = document.getElementById("open-modal-btn");
+            const closeBtn = document.querySelector(".modal-close");
+            const form = document.getElementById("subscribe-form");
+            const successMessage = document.getElementById("success-message");
+
+            // Otwieranie modalu
+            openBtn.onclick = function() {
+                modal.style.display = "block";
+                form.style.display = "block"; // Resetuje formularz
+                successMessage.style.display = "none"; // Ukrywa komunikat sukcesu
+                form.reset(); // Czyści pole email
+            }
+
+            // Zamykanie modalu przy kliknięciu "x"
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Zamykanie modalu przy kliknięciu poza oknem
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Obsługa fikcyjnej subskrypcji
+            form.onsubmit = function(event) {
+                event.preventDefault(); // Zapobiega przeładowaniu strony
+                
+                // Ukrycie formularza i wyświetlenie komunikatu sukcesu
+                form.style.display = "none";
+                successMessage.style.display = "block";
+            }
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+        const contentEl = document.getElementById("article-content");
+        const tocSidebar = document.getElementById("toc-sidebar");
+        const stickyMenu = document.getElementById("sticky-menu");
+        if (!contentEl || !tocSidebar || !stickyMenu) return;
+    
+        /* Progress bar tworzony i wpinany do sticky menu */
+        const progressBar = document.createElement("div");
+        progressBar.className = "reading-progress";
+        stickyMenu.appendChild(progressBar);
+    
+        const headings = Array.from(contentEl.querySelectorAll("h2"));
+        if (headings.length === 0) {
+            tocSidebar.style.display = "none";
+            return;
+        }
+    
+        const slugify = (str) =>
+            str.toLowerCase()
+               .trim()
+               .replace(/[^\w\s-ąćęłńóśżź]/g, "")
+               .replace(/\s+/g, "-")
+               .replace(/-+/g, "-");
+    
+        headings.forEach((h2, i) => {
+            if (!h2.id) {
+                const base = slugify(h2.textContent || `section-${i+1}`);
+                let id = base || `section-${i+1}`;
+                let counter = 1;
+                while (document.getElementById(id)) {
+                    id = `${base}-${counter++}`;
+                }
+                h2.id = id;
+            }
+        });
+    
+        const titleEl = document.createElement("div");
+        titleEl.className = "toc-title";
+        titleEl.textContent = "Table of contents";
+        tocSidebar.appendChild(titleEl);
+    
+        const ul = document.createElement("ul");
+        ul.className = "toc-list";
+    
+        const links = headings.map(h2 => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = `#${h2.id}`;
+            a.textContent = h2.textContent;
+    
+            a.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.getElementById(h2.id).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+                history.replaceState(null, "", `#${h2.id}`);
+            });
+    
+            li.appendChild(a);
+            ul.appendChild(li);
+            return a;
+        });
+    
+        tocSidebar.appendChild(ul);
+    
+        const setActive = (id) => {
+            links.forEach(a => {
+                a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+            });
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+            const visible = entries
+                .filter(e => e.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    
+            if (visible) setActive(visible.target.id);
+        }, {
+            rootMargin: "0px 0px -65% 0px",
+            threshold: [0.1, 0.25, 0.5, 0.75, 1.0]
+        });
+    
+        headings.forEach(h2 => observer.observe(h2));
+    
+        const updateProgress = () => {
+            const stickyActive = stickyMenu.classList.contains("sticky-active");
+    
+            if (!stickyActive) {
+                progressBar.style.display = "none";
+                progressBar.style.width = "0%";
+                return;
+            }
+    
+            progressBar.style.display = "block";
+    
+            const rect = contentEl.getBoundingClientRect();
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const contentTop = scrollTop + rect.top;
+            const contentHeight = contentEl.scrollHeight;
+            const viewportHeight = window.innerHeight;
+    
+            const maxScroll = contentHeight - viewportHeight;
+            const current = Math.min(Math.max(scrollTop - contentTop, 0), maxScroll);
+    
+            const percent = maxScroll > 0 ? (current / maxScroll) * 100 : 0;
+            progressBar.style.width = `${percent}%`;
+        };
+    
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+    
+        if (location.hash) {
+            const targetId = location.hash.replace("#", "");
+            if (document.getElementById(targetId)) {
+                setActive(targetId);
+            }
+        } else {
+            setActive(headings[0].id);
+        }
+    });
+    </script>
+    
+
+</body>
+</html>
